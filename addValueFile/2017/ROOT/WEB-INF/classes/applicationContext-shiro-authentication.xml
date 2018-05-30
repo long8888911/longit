@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+	 
+	<bean id="aebizShiroAop" class="com.aebiz.b2b2c.basebusiness.shiro.AebizShiroAop">
+		<property name="list">
+			<list>
+				<value>com.aebiz.b2b2c.decorateplatform.back.templates.web.TemplatesController.toAdd # (P{sysback:template:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.decorateplatform.back.templates.web.TemplatesController.toUpdate # (P{sysback:template:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.decorateplatform.back.templates.web.TemplatesController.deletes # (P{sysback:template:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.decorateplatform.back.pages.web.PagesController.toAdd # (P{sysback:page:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.decorateplatform.back.pages.web.PagesController.toUpdate # (P{sysback:page:button:edit}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.productbrand.ProductBrandController.toAdd # (P{sysback:productbrand:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productbrand.ProductBrandController.toUpdate # (P{sysback:productbrand:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productbrand.ProductBrandController.deletes # (P{sysback:productbrand:button:delete}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.productmainauditreason.ProductMainAuditReasonController.toList # (P{sysback:productauditreason:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productmainauditreason.ProductMainAuditReasonController.toAdd # (P{sysback:productauditreason:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productmainauditreason.ProductMainAuditReasonController.toUpdate # (P{sysback:productauditreason:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productmainauditreason.ProductMainAuditReasonController.deletes # (P{sysback:productauditreason:button:delete}) || R{SYSROLE}</value>
+				
+				<!-- 后台零售商品管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toAudit # (P{sysback:retailproduct:button:audit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.waitdeletes # (P{sysback:product:button:waitdeletes}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.auditdeletes # (P{sysback:product:button:auditdeletes}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.o2oauditdeletes # (P{sysback:product:button:o2oauditdeletes}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.allauditdeletes # (P{sysback:product:button:allauditdeletes}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.cusauditdelete # (P{sysback:product:button:cusauditdelete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.comauditdelete # (P{sysback:product:button:comauditdelete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.exhauditdelete # (P{sysback:product:button:exhauditdelete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.deletes # (P{sysback:product:button:deletes}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toSysbackAllAudit # (P{sysback:productcoupon:menu:auditalllist}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productmainaudit.ProductMainAuditController.batchAuditPass # (P{sysback:ordinaryproduct:button:batchauditpass}) || R{SYSROLE}</value>
+				
+				<!-- 商品导出权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.exports # (P{sysback:retailproduct:button:exports}) || R{SYSROLE}</value>
+				<!-- 商品导出权限 -->
+				<value>com.aebiz.b2b2c.product.frontback.web.productdetail.FrontProductController.toView # (P{sysback:fromtproduct:button:toView}) || R{SYSROLE}</value>
+				<!-- 后台零售商品管理 -->
+				
+				<!-- 后台优惠券商品管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.toList # (P{sysback:productcoupon:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.toAudit # (P{sysback:productcoupon:button:audit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.deletes # (P{sysback:productcoupon:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.auditdeletes # (P{sysback:productcoupon:button:auditdeletes}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.o2odelete # (P{sysback:productcoupon:button:o2odelete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.cusdelete # (P{sysback:productcoupon:button:cusdelete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.comdelete # (P{sysback:productcoupon:button:comdelete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.exhdelete # (P{sysback:product:button:exhdelete}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.toInfo # (P{sysback:productcoupon:button:info}) || R{SYSROLE}</value>
+				<!-- 商品导出权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.auditExport # (P{sysback:productcoupon:button:exports}) || R{SYSROLE}</value>
+				<!-- 后台优惠券商品管理 -->
+				
+				<!-- 后台优惠券商品审核管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductCouponController.toSysbackAudit # (P{sysback:productcoupon:menu:auditlist}) || R{SYSROLE}</value>
+				<!-- 后台优惠券商品审核管理 -->
+				
+				<!-- 后台套装商品管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductSuitController.toAudit # (P{sysback:suitproduct:button:audit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductSuitController.deletes # (P{sysback:suitproduct:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductSuitController.auditdelete # (P{sysback:suitproduct:button:auditdelete}) || R{SYSROLE}</value>
+				
+				
+				<!-- 商品导出权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductSuitController.exports # (P{sysback:suitproduct:button:exports}) || R{SYSROLE}</value>
+				<!-- 后台套装商品管理 -->
+				
+				<!-- 后台定制商品管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toAudit # (P{sysback:suitproduct:button:audit}) || R{SYSROLE}</value>
+				
+				<!-- 定制商品/商用商品/展示商品导出 -->
+				<!-- 选择部分商品导出权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.productExport # (P{sysback:threeproduct:button:exports}) || R{SYSROLE}</value>
+				<!-- 后台定制商品管理 -->
+				
+				<!-- 后台价格管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.productmainbaseprice.ProductMainBasePriceController.toList # (P{sysback:productbaseprice:menu:list}) || R{SYSROLE}</value>
+				<!-- 商品导出权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.productmainbaseprice.ProductMainBasePriceController.toInfo # (P{sysback:productbaseprice:button:info}) || R{SYSROLE}</value>
+				<!-- 后台价格管理  -->
+				
+				<!-- 后台方案管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogram.CustomizedProgramController.toList # (P{sysback:customizedprogram:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogram.CustomizedProgramController.changShowState # (P{sysback:customizedprogram:button:changshow}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogram.CustomizedProgramController.deletes # (P{sysback:customizedprogram:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogram.CustomizedProgramController.toInfo # (P{sysback:customizedprogram:button:info}) || R{SYSROLE}</value>
+				<!-- 同步方案权限 -->
+				<value>com.aebiz.b2b2c.product.api.back.web.KJLAPIController.synPrograms # (P{sysback:customizedprogram:button:synPrograms}) || R{SYSROLE}</value>
+				<!-- 后台方案管理 -->
+				
+				<!-- 后台方案模板属性管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogramtemplate.CustomizedProgramTemplateController.toList # (P{sysback:customizedprogramtemplate:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogramtemplate.CustomizedProgramTemplateController.toUpdate # (P{sysback:customizedprogramtemplate:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogramtemplate.CustomizedProgramTemplateController.deletes # (P{sysback:customizedprogramtemplate:button:delete}) || R{SYSROLE}</value>
+				<!-- 关联方案 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogramtemplaterel.CustomizedProgramTemplateRelController.toRelList # (P{sysback:customizedprogramtemplate:button:rel}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.customizedprogramtemplate.CustomizedProgramTemplateController.toAdd # (P{sysback:customizedprogramtemplate:button:add}) || R{SYSROLE}</value>
+				<!-- 后台方案模板属性管理 -->
+				
+				<!-- 后台用户app页面管理 -->
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilepage.MobilePageController.toList # (P{sysback:mobilepage:menu:list}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilepage.MobilePageController.toUpdate # (P{sysback:mobilepage:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilepage.MobilePageController.deletes # (P{sysback:mobilepage:button:delete}) || R{SYSROLE}</value>
+				<!-- 页面搭建 -->
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilepage.MobilePageController.toDecorate # (P{sysback:mobilepage:button:decorate}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilepage.MobilePageController.toAdd # (P{sysback:mobilepage:button:add}) || R{SYSROLE}</value>
+				<!-- 后台用户app页面管理 -->
+				
+				<!-- 后台用户app组件管理 -->
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilecomponents.MobileComponentsController.toList # (P{sysback:mobilecomponents:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilecomponents.MobileComponentsController.toUpdate # (P{sysback:mobilecomponents:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilecomponents.MobileComponentsController.deletes # (P{sysback:mobilecomponents:button:delete}) || R{SYSROLE}</value>
+				<!-- 页面搭建 -->
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilecomponents.MobileComponentsController.toSetData # (P{sysback:mobilecomponents:button:setData}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.mobilecomponents.MobileComponentsController.toAdd # (P{sysback:mobilecomponents:button:add}) || R{SYSROLE}</value>
+				<!-- 后台用户app组件管理 -->
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplatecate.ProductTemplateCateController.toAdd # (P{sysback:producttempcate:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplatecate.ProductTemplateCateController.toUpdate # (P{sysback:producttempcate:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplatecate.ProductTemplateCateController.deletes # (P{sysback:producttempcate:button:delete}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplate.ProductTemplateController.toAdd # (P{sysback:producttemp:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplate.ProductTemplateController.toUpdate # (P{sysback:producttemp:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplate.ProductTemplateController.deletes # (P{sysback:producttemp:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattrrel.ProductTemplateAttrRelController.toRelList # (P{sysback:producttemp:button:viewAttr}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattr.ProductTemplateAttrController.toAdd # (P{sysback:producttempattr:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattr.ProductTemplateAttrController.toUpdate # (P{sysback:producttempattr:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattr.ProductTemplateAttrController.deletes # (P{sysback:producttempattr:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productattrandvaluerel.ProductAttrAndValueRelController.toRelList # (P{sysback:producttempattr:button:viewattrvalue}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.productattrvaluecate.ProductAttrValueCateController.toAdd # (P{ sysback:productattrvaluecate:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productattrvaluecate.ProductAttrValueCateController.toUpdate # (P{sysback:productattrvaluecate:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productattrvaluecate.ProductAttrValueCateController.deletes # (P{sysback:productattrvaluecate:button:delete}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattrvalue.ProductTemplateAttrValueController.toAdd # (P{sysback:productattrvalue:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattrvalue.ProductTemplateAttrValueController.toUpdate # (P{sysback:productattrvalue:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattrvalue.ProductTemplateAttrValueController.deletes # (P{sysback:productattrvalue:button:delete}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.productcategoryfront.ProductCategoryFrontController.toAdd # (P{sysback:frontcateaddsubcate:button}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productcategoryfront.ProductCategoryFrontController.toPlatform # (P{sysback:frontcaterelbackcate:button}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productcategoryfront.ProductCategoryFrontController.toAttribute # (P{sysback:frontcaterelattr:button}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.productcategoryplatform.ProductCategoryPlatformController.toAdd # (P{sysback:backcateaddsubcate:button}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productcategoryplatform.ProductCategoryPlatformController.toBatchAdd # (P{sysback:backcatebatchaddsubcate:button}) || R{SYSROLE}</value>
+				
+				<!-- 商用商品分类管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcategoryplatform.CommercialProductCategoryPlatformController.toAdd # (P{sysback:backcatecommercialaddsubcate:button}) || R{SYSROLE}</value>
+				<!-- 商用商品分类关联商品 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.categoryfrontcommercialrelproduct.CategoryFrontCommercialRelProductController.toList # (P{sysback:backcatecommercialrelproduct:button}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcategoryplatform.CommercialProductCategoryPlatformController.toBatchAdd # (P{sysback:backcatebatchcommercialaddsubcate:button}) || R{SYSROLE}</value>
+				
+				<!-- 前台分类关联商品 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.categoryfrontcommercialrelproduct.CategoryFrontCommercialRelProductController.toList # (P{sysback:frontcaterelbackrelproduct:button}) || R{SYSROLE}</value>
+				
+				
+				<value>com.aebiz.b2b2c.cms.sysback.web.channel.ChannelController.toAdd # (P{sysback:channel:button:add}) || R{SYSROLE}</value>
+				<!-- <value>com.aebiz.b2b2c.cms.sysback.web.channel.ChannelController.toUpdate # (P{sysback:channel:button:edit}) || R{SYSROLE}</value> -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.channel.ChannelController.deletes # (P{sysback:channel:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.decorateplatform.sysback.web.PlatDfFrontController.toUpdateLayoutDefine # (P{sysback:channel:button:build}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.cms.sysback.web.contentcategory.ContentCategoryController.toAdd # (P{sysback:contentcateaddsub:button:add}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.cms.sysback.web.content.ContentController.toAdd # (P{sysback:content:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.content.ContentController.toUpdate # (P{sysback:content:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.content.ContentController.deletes # (P{sysback:content:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.content.ContentController.deletes # (P{sysback:content:button:relDept}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.cms.sysback.web.messageremind.MessageRemindController.toUpdate # (P{sysback:messageremind:button:edit}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.thirdinterface.sysback.web.thirdInterfaceTemplate.ThirdInterfaceTemplateController.toUpdate # (P{sysback:innermessagetemp:button:edit}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.cms.sysback.web.ordershow.OrderShowController.toReview # (P{sysback:ordershow:button:audit}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.cms.sysback.web.productappraise.ProductAppraiseController.toReview # (P{sysback:productapp:button:audit}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platimagecategory.PlatImageCategoryController.save # (P{sysback:imagelibrary:button:addcate}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platimagecategory.PlatImageCategoryController.updateCategory # (P{sysback:imagelibrary:button:editcate}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platimagecategory.PlatImageCategoryController.deleteCategory # (P{sysback:imagelibrary:button:deletecate}) || R{SYSROLE}</value>
+				
+				<!-- 广告管理 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platad.web.PlatAdController.toAdd # (P{sysback:ad:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platad.web.PlatAdController.toUpdate # (P{sysback:ad:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platad.web.PlatAdController.deletes # (P{sysback:ad:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platad.web.PlatAdController.relDept # (P{sysback:ad:button:relDept}) || R{SYSROLE}</value>	
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platadimagerel.web.PlatAdImageRelController.toRelImage # (P{sysback:ad:button:relimage}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.basicdata.sysback.web.logisticscompany.LogisticsCompanyController.toAdd # (P{sysback:logisticscompany:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.basicdata.sysback.web.logisticscompany.LogisticsCompanyController.toUpdate # (P{sysback:logisticscompany:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.basicdata.sysback.web.logisticscompany.LogisticsCompanyController.deletes # (P{sysback:logisticscompany:button:delete}) || R{SYSROLE}</value>
+				
+				<!-- 系统后台订单管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.toList # (P{sysback:order:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.view # (P{sysback:order:button:view}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.expiredExport # (P{sysback:order:button:export}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.viewLogistics # (P{sysback:order:button:viewLogistics}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.saveInvoice # (P{sysback:order:button:saveInvoice}) || R{SYSROLE}</value>
+				<!-- 系统后台订单管理 -->
+				
+				<!-- 系统后台新品试用订单管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.toOntrialList # (P{sysback:order:menu:ontrialList}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.ontrialView # (P{sysback:order:button:ontrialView}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.expiredExportOntrial # (P{sysback:order:button:expiredexportontrial}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.ordermain.OrderMainController.viewLogistics # (P{sysback:order:button:viewLogistics}) || R{SYSROLE}</value>
+				<!-- 系统后台新品试用订单管理 -->
+				
+				<!-- 系统后台定制需求单管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.specificlservice.SpecificlServiceController.toList # (P{sysback:specificlservice:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.specificlservice.SpecificlServiceController.view # (P{sysback:specificlservice:button:view}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.specificlservice.SpecificlServiceController.expiredExport # (P{sysback:specificlservice:button:expiredExport}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.specificlservice.SpecificlServiceController.toImport # (P{sysback:specificlservice:button:import}) || R{SYSROLE}</value>
+				<!-- 系统后台定制需求单管理 -->
+				
+				<!-- 系统后刷单评论语管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualscalp.VirtualScalpController.toList # (P{sysback:virtualscalp:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualscalp.VirtualScalpController.toAdd # (P{sysback:virtualscalp:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualscalp.VirtualScalpController.toInfo # (P{sysback:virtualscalp:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualscalp.VirtualScalpController.expiredExport # (P{sysback:virtualscalp:button:expiredExport}) || R{SYSROLE}</value>
+				<!-- 系统后台刷单评论语管理-->
+				
+				<!-- 系统后虚拟会员管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualcustomer.VirtualCustomerController.toList # (P{sysback:virtualcustomer:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualcustomer.VirtualCustomerController.toAdd # (P{sysback:virtualcustomer:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualcustomer.VirtualCustomerController.toInfo # (P{sysback:virtualcustomer:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualcustomer.VirtualCustomerController.deletes # (P{sysback:virtualcustomer:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualcustomer.VirtualCustomerController.toUpdate # (P{sysback:virtualcustomer:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.virtualcustomer.VirtualCustomerController.toImport # (P{sysback:virtualcustomer:button:import}) || R{SYSROLE}</value>
+				<!-- 系统后台虚拟会员管理-->
+				
+				<!-- 系统后评论语管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.productcomments.ProductCommentsController.toList # (P{sysback:productcomments:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.productcomments.ProductCommentsController.toAdd # (P{sysback:productcomments:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.productcomments.ProductCommentsController.deletes # (P{sysback:productcomments:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.productcomments.ProductCommentsController.toUpdate # (P{sysback:productcomments:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.productcomments.ProductCommentsController.toImport # (P{sysback:productcomments:button:import}) || R{SYSROLE}</value>
+				<!-- 系统后台评论语管理-->
+				
+				<!-- 系统后解决方案管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.solvescheme.SolveSchemeController.toList # (P{sysback:solvescheme:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solvescheme.SolveSchemeController.toAdd # (P{sysback:solvescheme:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solvescheme.SolveSchemeController.deletes # (P{sysback:solvescheme:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solvescheme.SolveSchemeController.toUpdate # (P{sysback:solvescheme:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solveSchemeCaseanalysisCategoryRel.SolveSchemeCaseanalysisCategoryRelController.toRel # (P{sysback:solvescheme:button:torel}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcaserel.CommercialProductCaseRelController.toList # (P{sysback:solvescheme:button:torellist}) || R{SYSROLE}</value>
+				<!-- 系统后台解决方案管理-->
+				
+				<!-- 系统后台商用商品分类管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcategory.CommercialProductCategoryController.toList # (P{sysback:commercialproductcategory:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcategory.CommercialProductCategoryController.toAdd # (P{sysback:scommercialproductcategory:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcategory.CommercialProductCategoryController.deletes # (P{sysback:commercialproductcategory:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcategory.CommercialProductCategoryController.toUpdate # (P{sysback:commercialproductcategory:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialcategoryproductrel.CommercialCategoryProductRelController.toList # (P{sysback:commercialproductcategory:button:torellist}) || R{SYSROLE}</value>
+				<!-- 系统后台商用商品分类管理 -->
+				
+				<!-- 系统后案例管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysis.CaseAnalysisController.toList # (P{sysback:caseanalysis:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysis.CaseAnalysisController.toAdd # (P{sysback:caseanalysis:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysis.CaseAnalysisController.deletes # (P{sysback:caseanalysis:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysis.CaseAnalysisController.toUpdate # (P{sysback:caseanalysis:button:edit}) || R{SYSROLE}</value>
+				<!-- 系统后台案例管理-->
+				
+				<!-- 系统后台解决方案类型管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.solveschemecategory.SolveschemeCategoryController.toList # (P{sysback:solveschemecategory:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solveschemecategory.SolveschemeCategoryController.toAdd # (P{sysback:solveschemecategory:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solveschemecategory.SolveschemeCategoryController.deletes # (P{sysback:solveschemecategory:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solveschemecategory.SolveschemeCategoryController.toUpdate # (P{sysback:solveschemecategory:button:edit}) || R{SYSROLE}</value>
+				<!-- 系统后台解决方案类型管理 -->
+				
+				<!-- 系统后台案例类型管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysiscategory.CaseanalysisCategoryController.toList # (P{sysback:caseanalysiscategory:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysiscategory.CaseanalysisCategoryController.toAdd # (P{sysback:caseanalysiscategory:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysiscategory.CaseanalysisCategoryController.deletes # (P{sysback:caseanalysiscategory:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.caseanalysiscategory.CaseanalysisCategoryController.toUpdate # (P{sysback:caseanalysiscategory:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solveSchemeCaseanalysisCategoryRel.SolveSchemeCaseanalysisCategoryRelController.caseanalysisCategorySolveSchemeRel # (P{sysback:caseanalysiscategory:button:relcatelist}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.solvescheme.SolveSchemeController.toRel # (P{sysback:caseanalysiscategory:button:torelcase}) || R{SYSROLE}</value>
+				<!-- 系统后台案例类型管理-->
+				
+				<!-- 系统后台平台优惠券类型管理 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.toList # (P{sysback:coupontype:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.toAdd # (P{sysback:coupontype:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.toInfo # (P{sysback:coupontype:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.deletes # (P{sysback:scoupontype:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.toUpdate # (P{sysback:coupontype:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontypeproductrel.CouponTypeProductRelController.toList # (P{sysback:coupontype:button:torelpro}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.couponbatch.CouponBatchController.toAdd # (P{sysback:coupontype:button:addcouponbatch}) || R{SYSROLE}</value>
+				<!-- 系统后台平台优惠券类型管理 -->
+				
+				<!-- 系统后台平台优惠券明细管理 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.toList # (P{sysback:coupondetails:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.export # (P{sysback:coupondetails:button:export}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.toInfo # (P{sysback:coupondetails:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.sendCouponDetail # (P{sysback:coupondetails:button:sendCouponDetail}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.cancellation # (P{sysback:coupondetails:button:cancellation}) || R{SYSROLE}</value>
+				<!-- 系统后台平台优惠券明细管理 -->
+				
+				<!-- 系统后台平台优惠券批次管理 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.couponbatch.CouponBatchController.toList # (P{sysback:couponbatch:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.createCoupon # (P{sysback:couponbatch:button:createcoupon}) || R{SYSROLE}</value>
+				<!-- 系统后台平台优惠券批次管理 -->
+				
+				<!-- 系统后台商户优惠券类型管理-->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.toStoreList # (P{sysback:coupontype:menu:storelist}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupontype.CouponTypeController.toAudit # (P{sysback:coupontype:button:audit}) || R{SYSROLE}</value>
+				<!-- 系统后台商户优惠券类型管理-->
+				
+				<!-- 系统后台商户优惠券明细管理-->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.toStoreList # (P{sysback:coupondetails:menu:storeList}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.export # (P{sysback:coupondetails:button:storeexport}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.coupondetails.CouponDetailsController.toInfo # (P{sysback:coupondetails:button:storeinfo}) || R{SYSROLE}</value>
+				<!-- 系统后台商户优惠券明细管理 -->
+				
+				<!-- 系统后台活动审核管理-->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activity.PromotionActivtyInfoController.toList # (P{sysback:promotionactivtyinfo:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activity.PromotionActivtyInfoController.toPromotionAudit # (P{sysback:promotionactivtyinfo:button:audit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activity.PromotionActivtyInfoController.toPromotionactivtyView # (P{sysback:promotionactivtyinfo:button:info}) || R{SYSROLE}</value>
+				<!-- 系统后台活动审核管理-->
+				
+				<!-- 系统后台新品试用活动审核 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activity.PromotionActivtyInfoController.toList # (P{sysback:promotionactivtyinfo:menu:ontriallist}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activity.PromotionActivtyInfoController.toPromotionAudit # (P{sysback:promotionactivtyinfo:button:ontrialaudit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activity.PromotionActivtyInfoController.toPromotionactivtyView # (P{sysback:promotionactivtyinfo:button:ontrialinfo}) || R{SYSROLE}</value>
+				<!-- 系统后台新品试用活动审核 -->
+				
+				<!-- 系统后台活动审核配置 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activityconfiguration.ActivityconFigurationController.toList # (P{sysback:activityconfiguration:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activityconfiguration.ActivityconFigurationController.toAdd # (P{sysback:promotionactivtyinfo:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activityconfiguration.ActivityconFigurationController.toActivityUpdate # (P{sysback:promotionactivtyinfo:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.activityconfiguration.ActivityconFigurationController.deletes # (P{sysback:promotionactivtyinfo:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台活动审核配置 -->
+				
+				<!-- 系统后台平台抽奖明细管理-->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionactivtycustomerrel.PromotionActivtyCustomerRelController.toList # (P{sysback:promotionactivtycustomerrel:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionactivtycustomerrel.PromotionActivtyCustomerRelController.expiredExportSys # (P{sysback:promotionactivtycustomerrel:button:expsys}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionactivtycustomerrel.PromotionActivtyCustomerRelController.send # (P{sysback:promotionactivtycustomerrel:button:send}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionactivtycustomerrel.PromotionActivtyCustomerRelController.toInfo # (P{sysback:promotionactivtycustomerrel:button:info}) || R{SYSROLE}</value>
+				<!-- 系统后台平台抽奖明细管理 -->
+				
+				<!-- 系统后台商户抽奖明细管理 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionactivtycustomerrel.PromotionActivtyCustomerRelController.toList # (P{sysback:friendincentiveinvite:menu:list}) || R{SYSROLE}</value>
+				<!-- 系统后台商户抽奖明细管理 -->
+				
+				<!-- 系统后台催付模板管理-->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.expediting.ExpeditingController.toList # (P{sysback:expediting:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.expediting.ExpeditingController.toAdd # (P{sysback:expediting:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.expediting.ExpeditingController.deletes # (P{sysback:expediting:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台催付模板管理 -->
+				
+				<!-- 系统后台邀请好友管理 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.friendincentiveinvite.FriendIncentiveInviteController.toStoreList # (P{sysback:promotionactivtycustomerrel:menu:storelist}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.friendincentiveinvite.FriendIncentiveInviteController.expiredExportStore # (P{sysback:promotionactivtycustomerrel:button:epstore}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.friendincentiveinvite.FriendIncentiveInviteController.toUpdate # (P{sysback:promotionactivtycustomerrel:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.friendincentiveinvite.FriendIncentiveInviteController.deletes # (P{sysback:promotionactivtycustomerrel:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台邀请好友管理 -->
+				
+				<!-- 系统后台短信营销模板-->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.marketingtemplate.MarketingTemplateController.toList # (P{sysback:marketingtemplate:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.marketingtemplate.MarketingTemplateController.toAdd # (P{sysback:marketingtemplate:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.marketingtemplate.MarketingTemplateController.deletes # (P{sysback:marketingtemplate:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台短信营销模板-->
+				
+				<!-- 系统后台邮箱营销模板 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.marketingtemplate.EmailTemplateController.toList # (P{sysback:marketingtemplatemsg:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.marketingtemplate.EmailTemplateController.toAdd # (P{sysback:marketingtemplatemsg:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.marketingtemplate.EmailTemplateController.deletes # (P{sysback:marketingtemplatemsg:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台邮箱营销模板-->
+				
+				<!-- 系统后台催付统计 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.expeditingstatistics.ExpeditingStatisticsController.toList # (P{sysback:expeditingstatistics:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.promotion.sysback.web.expeditingstatistics.ExpeditingStatisticsController.toExpeditingOrderList # (P{sysback:expeditingstatistics:button:info}) || R{SYSROLE}</value>
+				<!-- 系统后台催付统计-->
+				
+				<!-- 系统后台经销商部门管理 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.dealerdept.DealerDeptController.toList # (P{sysback:dealerdept:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealerdept.DealerDeptController.toAdd # (P{sysback:dealerdept:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealerdept.DealerDeptController.deletes # (P{sysback:dealerdept:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealerdept.DealerDeptController.toUpdate # (P{sysback:dealerdept:button:edit}) || R{SYSROLE}</value>
+				<!-- 系统后台经销商部门管理 -->
+				
+				<!-- 系统后台经销商账户管理 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.dealeraccount.DealerAccountController.toList # (P{sysback:dealeraccount:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealeraccount.DealerAccountController.toAdd # (P{sysback:dealeraccount:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealeraccount.DealerAccountController.deletes # (P{sysback:dealeraccount:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealeraccount.DealerAccountController.toUpdate # (P{sysback:dealeraccount:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealeraccount.DealerAccountController.toInfo # (P{sysback:dealeraccount:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealeraccount.DealerAccountController.restPassword # (P{sysback:dealeraccount:button:restpassword}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealerdeptrel.DealerDeptRelController.toRelatedRole # (P{sysback:dealeraccount:button:relateddept}) || R{SYSROLE}</value>
+				<!-- 系统后台经销商账户管理 -->
+				
+				<!-- 系统后台经销商资料分类管理 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.meansType.MeansTypeController.toList # (P{sysback:meanstype:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.meansType.MeansTypeController.toAdd # (P{sysback:meanstype:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.meansType.MeansTypeController.deletes # (P{sysback:meanstype:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.meansType.MeansTypeController.toUpdate # (P{sysback:meanstype:button:edit}) || R{SYSROLE}</value>
+				<!-- 系统后台经销商资料分类管理-->
+				
+				<!-- 系统后台经销商资料管理 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.dealermeans.DealerMeansController.toList # (P{sysback:dealermeans:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealermeans.DealerMeansController.toAdd # (P{sysback:dealermeans:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealermeans.DealerMeansController.deletes # (P{sysback:dealermeans:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealermeans.DealerMeansController.toUpdate # (P{sysback:dealermeans:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.store.sysback.web.dealermeans.DealerMeansController.toInfo # (P{sysback:dealermeans:button:info}) || R{SYSROLE}</value>
+				<!-- 系统后台经销商资料管理-->
+				
+				<!-- 系统后台会员签到规则管理 -->
+				<value>com.aebiz.b2b2c.customersignrule.sysback.web.customersignrule.CustomerSignRuleController.toList # (P{sysback:customersignrule:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customersignrule.sysback.web.customersignrule.CustomerSignRuleController.toAdd # (P{sysback:customersignrule:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customersignrule.sysback.web.customersignrule.CustomerSignRuleController.deletes # (P{sysback:customersignrule:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台会员签到规则管理-->
+				
+				<!-- 系统后台会员签到规则管理 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.registeredmemberreward.RegisteredMemberRewardController.toView # (P{sysback:registeredmemberreward:menu:list}) || R{SYSROLE}</value>
+				<!-- 系统后台会员签到规则管理-->
+				
+				<!-- 系统后台会员随屏签到或优惠券-->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.rewardscreensign.RewardScreenSignController.toView # (P{sysback:rewardscreensign:menu:list}) || R{SYSROLE}</value>
+				<!-- 系统后台会员随屏签到或优惠券-->
+				
+				<!-- 系统后台会员签到管理 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customersign.SysCustomerSignController.toList # (P{sysback:customersign:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customersign.SysCustomerSignController.toView # (P{sysback:customersign:button:info}) || R{SYSROLE}</value>
+				<!-- 系统后台会员签到管理-->
+				
+				<!-- 系统后台设计师管理 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.designer.DesignerController.toList # (P{sysback:designer:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.designer.DesignerController.toAdd # (P{sysback:designer:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.designer.DesignerController.toUpdate # (P{sysback:designer:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.api.back.web.KJLAPIController.synDesigner # (P{sysback:designer:button:syndesigner}) || R{SYSROLE}</value>
+				<!-- 系统后台设计师管理-->
+				
+				<!-- 系统后台会员权益管理管理 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customerinterests.CustomerInterestsController.toList # (P{sysback:customerinterests:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customerinterests.CustomerInterestsController.toAdd # (P{sysback:customerinterests:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customerinterests.CustomerInterestsController.toUpdate # (P{sysback:customerinterests:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customerinterests.CustomerInterestsController.deletes # (P{sysback:customerinterests:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台会员权益管理管理-->
+				
+				<!-- 系统后台招聘部门 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitdept.RecruitDeptController.toList # (P{sysback:recruitdept:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitdept.RecruitDeptController.toAdd # (P{sysback:recruitdept:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitdept.RecruitDeptController.toUpdate # (P{sysback:recruitdept:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitdept.RecruitDeptController.deletes # (P{sysback:recruitdept:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台招聘部门-->
+				
+				<!-- 系统后台宣教行程-->
+				<value>com.aebiz.b2b2c.cms.sysback.web.resumecourse.ResumeCourseController.toList # (P{sysback:resumecourse:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.resumecourse.ResumeCourseController.toAdd # (P{sysback:resumecourse:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.resumecourse.ResumeCourseController.toUpdate # (P{sysback:resumecourse:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.resumecourse.ResumeCourseController.deletes # (P{sysback:resumecourse:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台宣教行程-->
+				
+				<!-- 系统后台九牧内刊管理-->
+				<value>com.aebiz.b2b2c.cms.sysback.web.resourcemagazine.ResourceMagazineController.toList # (P{sysback:resourcemagazine:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.resourcemagazine.ResourceMagazineController.toAdd # (P{sysback:resourcemagazine:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.resourcemagazine.ResourceMagazineController.toUpdate # (P{sysback:resourcemagazine:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.resourcemagazine.ResourceMagazineController.deletes # (P{sysback:resourcemagazine:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台九牧内刊管理-->
+				
+				<!-- 系统后台内刊详情管理 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.magazinedetail.MagazineDetailController.toList # (P{sysback:magazinedetail:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.magazinedetail.MagazineDetailController.toAdd # (P{sysback:magazinedetail:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.magazinedetail.MagazineDetailController.toUpdate # (P{sysback:magazinedetail:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.magazinedetail.MagazineDetailController.deletes # (P{sysback:magazinedetail:button:delete}) || R{SYSROLE}</value>
+				<!-- 系统后台内刊详情管理-->
+				
+				<!-- 系统后台商户优惠券批次管理 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.couponbatch.CouponBatchController.toStoreList # (P{sysback:couponbatch:menu:storeList}) || R{SYSROLE}</value>
+				<!-- 系统后台商户优惠券批次管理-->
+				
+				<!-- 系统后台意向单管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.specificlservice.SpecificlServiceController.toIntentionList # (P{sysback:specificlservice:menu:intentionList}) || R{SYSROLE}</value>
+				<!-- 系统后台意向单管理-->
+				
+				<!-- 系统后台服务单管理 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.installservice.InstallServiceController.toList # (P{sysback:installservice:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.installservice.InstallServiceController.toInfo # (P{sysback:installservice:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.installservice.InstallServiceController.deletes # (P{sysback:installservice:button:delete}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.order.sysback.web.installservice.InstallServiceController.toImport # (P{sysback:installservice:button:import}) || R{SYSROLE}</value>
+				<!-- 系统后台服务单管理 -->
+				
+				<!-- 系统后问卷收集管理 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questionnaireanswer.QuestionnaireAnswerController.toList # (P{sysback:questionnaireanswer:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questionnaireanswer.QuestionnaireAnswerController.expiredExportByCondition # (P{sysback:installservice:button:export}) || R{SYSROLE}</value>
+				<!-- 系统后台问卷收集管理-->
+				
+				<value>com.aebiz.b2b2c.decorateplatform.back.templates.web.TemplatesController.toList # (P{sysback:template:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.decorateplatform.back.pages.web.PagesController.toList # (P{sysback:page:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productbrand.ProductBrandController.toList # (P{sysback:productbrand:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productparamset.ProductParamController.toAdd # (P{sysback:productpramset:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toList # (P{sysback:retailproduct:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toInfo # (P{sysback:fromtproduct:button:toInfo}) || R{SYSROLE}</value>
+				<!-- o2o商品管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toO2oList # (P{sysback:retailproduct:menu:o2oList}) || R{SYSROLE}</value>
+				<!-- 定制商品管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toCustomizedList # (P{sysback:retailproduct:menu:customizedList}) || R{SYSROLE}</value>
+				<!-- 商用商品管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toCommercialProList # (P{sysback:retailproduct:menu:commercialList}) || R{SYSROLE}</value>
+				<!-- 套装商品管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductSuitController.toList # (P{sysback:suitproduct:menu:list}) || R{SYSROLE}</value>
+				<!-- 套装商品审核管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductSuitController.toAudit # (P{sysback:suitproduct:menu:auditlist}) || R{SYSROLE}</value>
+				<!-- 展示商品管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toExhibitionList # (P{sysback:exhibitionList:menu:list}) || R{SYSROLE}</value>
+				<!-- 商品管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toAllList # (P{sysback:alllist:menu:list}) || R{SYSROLE}</value>
+
+				<!-- o2o商品审核管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toO2oAudit # (P{sysback:productaudit:menu:o2oAudit}) || R{SYSROLE}</value>
+				<!-- o2o商品审核管理 -->
+				<!-- 定制商品审核菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toCustomizedAudit # (P{sysback:retailproduct:menu:customizedAudit}) || R{SYSROLE}</value>
+				<!-- 展示商品审核菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toExhibitionAudit # (P{sysback:retailproduct:menu:exhibitionAudit}) || R{SYSROLE}</value>
+				
+				<!-- 商用商品审核菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toCommercialAudit # (P{sysback:retailproduct:menu:commercialAudit}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductOrdinaryController.toSysbackAudit # (P{sysback:productaudit:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.product.ProductTempController.toExport # (P{sysback:productimportt:menu:toImport}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplatecate.ProductTemplateCateController.toList # (P{sysback:producttempcate:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplate.ProductTemplateController.toList # (P{sysback:producttemp:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattr.ProductTemplateAttrController.toList # (P{sysback:producttempattr:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productattrvaluecate.ProductAttrValueCateController.toList # (P{sysback:productattrvaluecate:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.producttemplateattrvalue.ProductTemplateAttrValueController.toList # (P{sysback:productattrvalue:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productcategoryfront.ProductCategoryFrontController.toCategory # (P{sysback:productcatefront:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.product.sysback.web.productcategoryplatform.ProductCategoryPlatformController.toCategory # (P{sysback:productcateback:menu:list}) || R{SYSROLE}</value>
+				<!-- 商用商品分类管理 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.commercialproductcategoryplatform.CommercialProductCategoryPlatformController.toCategory # (P{sysback:productcommercialcateback:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.channel.ChannelController.toList # (P{sysback:channel:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.contentcategory.ContentCategoryController.toCategory # (P{sysback:contentcate:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.content.ContentController.toList # (P{sysback:content:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.messageremind.MessageRemindController.toList # (P{sysback:messageremind:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.thirdinterface.sysback.web.emailmessage.EmailMessageController.toView # (P{sysback:emailset:menu}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.thirdinterface.sysback.web.mobilemessage.MobileMessageController.toView # (P{sysback:messageset:menu}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.thirdinterface.sysback.web.thirdInterfaceTemplate.ThirdInterfaceTemplateController.toList # (P{sysback:innermessagetemp:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.ordershow.OrderShowController.toList # (P{sysback:ordershow:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.cms.sysback.web.productappraise.ProductAppraiseController.toList # (P{sysback:productapp:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.userfront.sysback.web.plattimagelibrary.PlattImageLibraryController.toList # (P{sysback:imagelibrary:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.userfront.sysback.web.platad.web.PlatAdController.toList # (P{sysback:ad:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.basicdata.sysback.web.province.ProvinceController.toList # (P{sysback:province:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.basicdata.sysback.web.city.CityController.toList # (P{sysback:city:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.basicdata.sysback.web.region.RegionController.toList # (P{sysback:region:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.basicdata.sysback.web.logisticscompany.LogisticsCompanyController.toList # (P{sysback:logisticscompany:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-售后服务-售后服务管理菜单权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.orderaftersaleservicemain.OrderAfterSaleServiceMainController.toList # (P{sysback:aftersale:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-售后服务-售后服务管理查看按钮权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.orderaftersaleservicemain.OrderAfterSaleServiceMainController.view # (P{sysback:aftersale:button:view}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.orderaftersaleservicemain.OrderAfterSaleServiceMainController.updateBackMoney # (P{sysback:aftersale:button:updateBackMoney}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.orderaftersaleservicemain.OrderAfterSaleServiceMainController.expiredExportByCondition # (P{sysback:aftersale:button:expiredexport}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-售后服务-投诉管理菜单权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.complaints.ComplaintsController.toList # (P{sysback:complaints:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-售后服务-投诉管理查看按钮权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.complaints.ComplaintsController.toView # (P{sysback:complaints:button:view}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-售后服务-投诉管理处理按钮权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.complaints.ComplaintsController.doHandelComplaints # (P{sysback:complaints:button:doHandel}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-售后服务-投诉管理删除按钮权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.sysback.web.complaints.ComplaintsController.deletes # (P{sysback:complaints:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-结算管理-结算管理菜单权限 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.splitsummary.SplitSummaryController.toList # (P{sysback:splitsummary:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-订单系统-结算管理-结算管理菜单权限 -->
+				<value>com.aebiz.b2b2c.order.sysback.web.splitdetail.SplitDetailController.toList # (P{sysback:splitsummary:button:view}) || R{SYSROLE}</value>
+				
+				<!-- 系统商户管理  -->
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理菜单权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecomplex.StoreComplexController.toList # (P{sysback:storecomplex:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecomplex.StoreComplexController.toUpdate # (P{sysback:storecomplex:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecomplex.StoreComplexController.deleteStore # (P{sysback:storecomplex:button:delete}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecomplex.StoreComplexController.toAdd # (P{sysback:storecomplex:button:toAdd}) || R{SYSROLE}</value>
+				
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【关联商用商品分类】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeaccount.StoreAccountController.toCommercialCategoryRel # (P{sysback:storecomplex:button:toComCategoryRel}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【关联商品分类】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeaccount.StoreAccountController.toCategoryRel # (P{sysback:storecomplex:button:toCategoryRel}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【冻结】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeaccount.StoreAccountController.freezeStore # (P{sysback:storecomplex:button:freezeStore}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【重置密码】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeaccount.StoreAccountController.restPassword # (P{sysback:storecomplex:button:restPassword}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-商户管理-商户管理【关联角色】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storerolerel.StoreRoleRelController.toStoreRoleRel # (P{sysback:storecomplex:button:toStoreRoleRel}) || R{SYSROLE}</value>
+				<!-- 系统商户管理  -->
+				
+				<!-- 后台-商户系统-商户管理-解冻申请管理菜单权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeunfrozenapply.StoreUnfrozenApplyController.toList # (P{sysback:storeunfrozenapply:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-解冻申请管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeunfrozenapply.StoreUnfrozenApplyController.toAdd # (P{sysback:storeunfrozenapply:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-解冻申请管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeunfrozenapply.StoreUnfrozenApplyController.deletes # (P{sysback:storeunfrozenapply:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户管理-解冻申请管理【查看/处理】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeunfrozenapply.StoreUnfrozenApplyController.toInfo # (P{sysback:storeunfrozenapply:button:info}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-待处理商户管理-待到期商户管理菜单权限 -->
+				<!-- <value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.toExpired # (P{sysback:storecontract:menu:list}) || R{SYSROLE}</value> -->
+				<!-- 后台-商户系统-待处理商户管理-待到期商户管理【导出】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.expiredExport # (P{sysback:storecontract:button:export}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-待处理商户管理-待到期商户管理【提醒】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.sendInnerMessage # (P{sysback:storecontract:button:sendInnerMessage}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-待处理商户管理-冻结商户管理菜单权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecomplex.StoreComplexController.toFreezeList # (P{sysback:storecomplex:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-待处理商户管理-冻结商户管理【导出】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecomplex.StoreComplexController.freezeExport # (P{sysback:storecomplex:button:export}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-待处理商户管理-冻结商户管理【解冻】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeaccount.StoreAccountController.unFreezeStore # (P{sysback:storecomplex:button:unFreeze}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户合同管理菜单权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.toList # (P{sysback:storecontract:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户合同管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.toAdd # (P{sysback:storecontract:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户合同管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.toUpdate # (P{sysback:storecontract:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户合同管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.deletes # (P{sysback:storecontract:button:delete}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户合同管理【保证金】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.createBondCharge # (P{sysback:storecontract:button:bondcharge}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户合同管理【服务费单据】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.createServiceCharge # (P{sysback:storecontract:button:servicecharge}) || R{SYSROLE}</value>
+				
+				<!-- 后台-商户系统-商户入驻管理-商户合同管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storecontract.StoreContractController.toInfo # (P{sysback:storecontract:button:info}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户入驻管理菜单权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeresidentapply.StoreResidentApplyController.toList # (P{sysback:storeresidentapply:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户入驻管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeresidentapply.StoreResidentApplyController.deletes # (P{sysback:storeresidentapply:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户入驻管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeresidentapply.StoreResidentApplyController.toInfo # (P{sysback:storeresidentapply:button:info}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户入驻管理【添加回访记录】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storevisitrecord.StoreVisitRecordController.toAddByApplyUuid # (P{sysback:storevisitrecord:button:toAddByApplyUuid}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户入驻管理【查看回访记录】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storevisitrecord.StoreVisitRecordController.toListByApplyUuid # (P{sysback:storevisitrecord:button:toListByApplyUuid}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户入驻管理【设置跟踪员】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storeresidentapply.StoreResidentApplyController.setManager # (P{sysback:storeresidentapply:button:setManager}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户违约管理菜单权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storebreakcontract.StoreBreakContractController.toList # (P{sysback:storebreakcontract:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户违约管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storebreakcontract.StoreBreakContractController.toAdd # (P{sysback:storebreakcontract:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户违约管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storebreakcontract.StoreBreakContractController.toUpdate # (P{sysback:storebreakcontract:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户违约管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storebreakcontract.StoreBreakContractController.deletes # (P{sysback:storebreakcontract:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户回访管理菜单权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storevisitrecord.StoreVisitRecordController.toVisitList # (P{sysback:storevisitrecord:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户回访管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storevisitrecord.StoreVisitRecordController.toAdd # (P{sysback:storevisitrecord:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户入驻管理-商户回访管理【回访】按钮权限 -->
+				<value>com.aebiz.b2b2c.store.sysback.web.storevisitrecord.StoreVisitRecordController.toAddByApplyUuid # (P{sysback:storevisitrecord:button:toAddByApplyUuid}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户图片库管理-商户图片库管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.productimagelibrary.ProductImageLibraryController.toList # (P{sysback:productimagelibrary:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-商户系统-商户图片库管理-商户图片哭管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.product.sysback.web.productimagelibrary.ProductImageLibraryController.deletes # (P{sysback:productimagelibrary:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-营销组件管理-营销组件管理菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionprivilegeprice.PromotionPrivilegePriceController.toList # (P{sysback:promotionprivilegeprice:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-营销组件管理-营销组件管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionprivilegeprice.PromotionPrivilegePriceController.toUpdate # (P{sysback:promotionprivilegeprice:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-营销组件管理-营销组件订单管理菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionprivilegeorder.PromotionPrivilegeOrderController.toList # (P{sysback:promotionprivilegeorder:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-营销组件管理-营销组件订单管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionprivilegeorder.PromotionPrivilegeOrderController.toInfo # (P{sysback:promotionprivilegeorder:button:info}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-平台促销管理-促销规则定义菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionusedefine.PromotionUseDefineController.toList # (P{sysback:promotionusedefine:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-平台促销管理-促销规则定义【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionusedefine.PromotionUseDefineController.toAdd # (P{sysback:promotionusedefine:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-平台促销管理-促销规则定义【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionusedefine.PromotionUseDefineController.toInfoModel # (P{sysback:promotionusedefine:button:info}) || R{SYSROLE}</value>
+				
+				<!-- 后台-组件活动审核 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotiondefine.PromotionDefineController.toPromotionAuditList # (P{sysback:promotiondefine:menu:auditlist}) || R{SYSROLE}</value>
+				<!-- <value>com.aebiz.b2b2c.promotion.sysback.web.promotiondefine.PromotionDefineController.toAdd # (P{sysback:promotiondefine:button:add}) || R{SYSROLE}</value> -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotiondefine.PromotionDefineController.toPromotionInfo # (P{sysback:promotiondefine:button:info}) || R{SYSROLE}</value>
+				<!-- <value>com.aebiz.b2b2c.promotion.sysback.web.promotiondefine.PromotionDefineController.toPromotionTypeList # (P{sysback:promotiondefine:menu:store:list}) || R{SYSROLE}</value> -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotiondefine.PromotionDefineController.toPromotionAudit # (P{sysback:promotiondefine:button:promotionaudit}) || R{SYSROLE}</value>
+				<!-- 后台-组件活动审核 -->
+				
+				<!-- 后台-促销系统-商品促销管理-商户促销报名菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionstoreattend.PromotionStoreAttendController.toList # (P{sysback:promotionstoreattend:menu:store:list}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-商品促销管理-商户促销报名【导出】按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionstoreattend.PromotionStoreAttendController.exports # (P{sysback:promotionstoreattend:menu:store:exports}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-商品促销管理-商户促销报名【审核】按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionstoreattend.PromotionStoreAttendController.toReview # (P{sysback:promotionstoreattend:menu:store:toReview}) || R{SYSROLE}</value>
+				<!-- 后台-促销系统-商品促销管理-商户促销报名【批量审核】按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.sysback.web.promotionstoreattend.PromotionStoreAttendController.reviews # (P{sysback:promotionstoreattend:menu:store:reviews}) || R{SYSROLE}</value>
+				
+				<!-- 后台-会员系统-推广员信息管理菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toGeneralizeList # (P{sysback:customercomb:button:generalizelist}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-推广员信息管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toGeneralizeView # (P{sysback:customercomb:button:generalizeview}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.generalizeAudit # (P{sysback:customercomb:button:generalizeaudit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.cancelQualification # (P{sysback:customercomb:button:cancelqualification}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.relChannelsAndCustomer # (P{sysback:customercomb:button:relChannelsAndCustomer}) || R{SYSROLE}</value>
+
+				<!-- 后台-会员系统-批发渠道管理 按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannel.WholesaleChannelController.toList # (P{sysback:wholesalechannel:menu:toList}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannel.WholesaleChannelController.toAdd # (P{sysback:wholesalechannel:button:toAdd}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannel.WholesaleChannelController.toUpdate # (P{sysback:wholesalechannel:button:toUpdate}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannel.WholesaleChannelController.deletes # (P{sysback:wholesalechannel:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-批发渠道关联商品管理 按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelproductrel.WholesaleChannelProductRelController.deletes # (P{sysback:wholesalechannelproductrel:button:deletes}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelproductrel.WholesaleChannelProductRelController.toList # (P{sysback:wholesalechannelproductrel:button:toList}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelproductrel.WholesaleChannelProductRelController.searchproducts # (P{sysback:wholesalechannelproductrel:button:searchs}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelproductrel.WholesaleChannelProductRelController.saves # (P{sysback:wholesalechannelproductrel:button:saves}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelproductrel.WholesaleChannelProductRelController.publishs # (P{sysback:wholesalechannelproductrel:button:publishs}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-批发渠道关联会员管理 按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelcustomerrel.WholesaleChannelCustomerRelController.deletes # (P{sysback:wholesalechannelcustomerrel:button:deletes}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelcustomerrel.WholesaleChannelCustomerRelController.toList # (P{sysback:wholesalechannelcustomerrel:button:toList}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.wholesalechannelcustomerrel.WholesaleChannelCustomerRelController.searchChannels # (P{sysback:wholesalechannelcustomerrel:button:searchs}) || R{SYSROLE}</value>
+				
+				<!-- 后台-会员系统-会员管理-会员信息管理菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toList # (P{sysback:customercomb:menu:list}) || R{SYSROLE}</value>
+				
+				<!-- 后台-会员系统-会员管理-会员信息管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toView # (P{sysback:customercomb:button:view}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-企业会员管理-企业会员管理【编辑】按钮权限 -->
+				<!-- <value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toUpdateCustomer # (P{sysback:customercomb:qy:button:edit}) || R{SYSROLE}</value> -->
+				<!-- 后台-会员系统-企业会员管理-企业会员管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toView # (P{sysback:customercomb:qy:button:view}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-企业会员管理-企业会员管理菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toEnterpriseList # (P{sysback:customercomb:qy:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员信息管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.toUpdateCustomer # (P{sysback:customercomb:button:toUpdateCustomer}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员信息管理【赠送积分】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customercomb.CustomerCombController.sendIntegral # (P{sysback:customercomb:button:sendIntegral}) || R{SYSROLE}</value>
+				
+				<!-- 后台-会员信息管理导入 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.toImport # (P{sysback:customercomb:button:import}) || R{SYSROLE}</value>
+				<!-- 后台-会员信息管理导入 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.expiredExportByCondition # (P{sysback:customercomb:button:export}) || R{SYSROLE}</value>
+				
+				
+				<!-- 后台-会员系统-会员管理-会员信息管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.toAdd # (P{sysback:customercomb:button:add}) || R{SYSROLE}</value>
+				
+				<!-- 后台-会员系统-会员管理-会员信息管理【冻结】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.frozen # (P{sysback:customercomb:button:frozen}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员信息管理【重置密码】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.resetPassword # (P{sysback:customercomb:button:resetPassword}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员等级管理菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customershoplevel.CustomerShopLevelController.toList # (P{sysback:customershoplevel:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员等级管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customershoplevel.CustomerShopLevelController.toAdd # (P{sysback:customershoplevel:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员等级管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customershoplevel.CustomerShopLevelController.toUpdate # (P{sysback:customershoplevel:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员等级管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customershoplevel.CustomerShopLevelController.deletes # (P{sysback:customershoplevel:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员积分管理菜单权限 -->
+				<value>com.aebiz.b2b2c.vipclub.sysback.web.vipclubintegralstat.VipclubIntegralStatController.toList # (P{sysback:vipclubintegralstat:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员积分管理【导出】按钮权限 -->
+				<value>com.aebiz.b2b2c.vipclub.sysback.web.vipclubintegralstat.VipclubIntegralStatController.export # (P{sysback:vipclubintegralstat:button:export}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员积分管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.vipclub.sysback.web.vipclubintegrallog.VipclubIntegralLogController.toQueryCustomerList # (P{sysback:vipclubintegralstat:button:toCustomerList}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-会员积分管理【调整】按钮权限 -->
+				<value>com.aebiz.b2b2c.vipclub.sysback.web.vipclubintegrallog.VipclubIntegralLogController.toAdapt # (P{sysback:vipclubintegralstat:button:toAdapt}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-邀请码管理菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customerinvitationcode.CustomerInvitationCodeController.toList # (P{sysback:customerinvitationcode:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-邀请码管理【查看详情】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customerinvitationcode.CustomerInvitationCodeController.view # (P{sysback:customerinvitationcode:button:view}) || R{SYSROLE}</value>
+
+				<!-- 后台-会员系统-会员管理-推广员渠道管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.generalizechannel.GeneralizeChannelController.toAdd # (P{sysback:generalizechannel:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-推广员渠道管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.generalizechannel.GeneralizeChannelController.toUpdate # (P{sysback:generalizechannel:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-推广员渠道管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.generalizechannel.GeneralizeChannelController.deletes # (P{sysback:generalizechannel:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-会员管理-推广员渠道管理【关联商品】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.generalizechannelproduct.GeneralizeChannelProductController.toList # (P{sysback:generalizechannel:button:relation}) || R{SYSROLE}</value>
+				
+				<!-- 后台-会员系统-企业会员管理-企业会员管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.toEnterpriseAdd # (P{sysback:customercomb:qy:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-企业会员管理-企业会员管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.deletes # (P{sysback:customercomb:qy:button:deletes}) || R{SYSROLE}</value>
+				
+				<!-- 后台-会员系统-企业会员管理-企业会员管理【冻结】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.customer.CustomerController.frozen # (P{sysback:customercomb:qy:button:frozen}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-企业服务-员工充值申请菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.employeeapply.EmployeeApplyController.toList # (P{sysback:employeeapply:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-企业服务-员工充值申请【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.employeeapply.EmployeeApplyController.deletes # (P{sysback:employeeapply:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-会员系统-企业服务-员工充值申请【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.employeeapply.EmployeeApplyController.toInfo # (P{sysback:employeeapply:button:info}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷管理菜单权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questionnaire.QuestionnaireController.toList # (P{sysback:questionnaire:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questionnaire.QuestionnaireController.toAdd # (P{sysback:questionnaire:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questionnaire.QuestionnaireController.toUpdate # (P{sysback:questionnaire:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questionnaire.QuestionnaireController.deletes # (P{sysback:questionnaire:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷管理【导出】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questionnaire.QuestionnaireController.expiredExportByCondition # (P{sysback:questionnaire:button:export}) || R{SYSROLE}</value>
+				
+				<!-- 后台-运营系统-问卷调查-问卷试题管理菜单权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questions.QuestionsController.toList # (P{sysback:questions:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷试题管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questions.QuestionsController.toAdd # (P{sysback:questions:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷试题管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questions.QuestionsController.toUpdate # (P{sysback:questions:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷试题管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questions.QuestionsController.deletes # (P{sysback:questions:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-问卷调查-问卷试题管理【导出】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.questions.QuestionsController.expiredExportByCondition # (P{sysback:questions:button:export}) || R{SYSROLE}</value>
+				
+				
+				<!-- 后台-运营系统-退款管理-退款单管理菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.orderreturnmoneymain.OrderReturnMoneyMainController.toList # (P{sysback:orderreturnmoney:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-退款管理-退款单管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.orderreturnmoneymain.OrderReturnMoneyMainController.toInfo # (P{sysback:orderreturnmoney:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.orderreturnmoneymain.OrderReturnMoneyMainController.exports # (P{sysback:orderreturnmoney:button:export}) || R{SYSROLE}</value>
+				
+				<!-- 后台-运营系统-发票管理-发票管理菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoice.InvoiceController.toList # (P{sysback:invoice:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-发票管理-发票管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoice.InvoiceController.toUpdate # (P{sysback:invoice:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoice.InvoiceController.toInfo # (P{sysback:invoice:button:info}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoice.InvoiceController.toUpdateEle # (P{sysback:invoice:button:updateele}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoice.InvoiceController.removeEle # (P{sysback:invoice:button:removeele}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoiceNewInvoiceController.blueTicketApply # (P{sysback:invoice:button:blueticketapply}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.InvoiceController.refuseInvoice # (P{sysback:invoice:button:refuseInvoice}) || R{SYSROLE}</value>
+
+				<!-- 后台-财务系统-发票管理-开票公司管理菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoicecompany.InvoiceCompanyController.toList # (P{sysback:invoicecompany:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-财务系统-发票管理-开票公司管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoicecompany.InvoiceCompanyController.toAdd # (P{sysback:invoicecompany:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoicecompany.InvoiceCompanyController.toUpdate # (P{sysback:invoicecompany:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoicecompany.InvoiceCompanyController.deletes # (P{sysback:invoicecompany:button:delete}) || R{SYSROLE}</value>
+
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoice.InvoiceController.expiredExportByCondition # (P{sysback:invoice:button:expiredExportByCondition}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.invoice.InvoiceController.toInvoiceImport # (P{sysback:invoice:button:toInvoiceImport}) || R{SYSROLE}</value>
+
+				<!-- 后台-财务管理-店铺管理-店铺管理菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.storemanage.StoreManageController.toList # (P{sysback:storemanage:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.storemanage.StoreManageController.toAdd # (P{sysback:storemanage:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.storemanage.StoreManageController.toUpdate # (P{sysback:storemanage:button:edit}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.storemanage.StoreManageController.deletes # (P{sysback:storemanage:button:deletes}) || R{SYSROLE}</value>
+
+				<!-- 后台-运营系统-运营管理-运营参数菜单权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.websiteoperate.WebsiteOperateController.toList # (P{sysback:websiteoperate:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-运营管理-运营参数【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.websiteoperate.WebsiteOperateController.toAdd # (P{sysback:websiteoperate:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-运营管理-运营参数【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.websiteoperate.WebsiteOperateController.toUpdate # (P{sysback:websiteoperate:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-运营管理-运营参数【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.websiteoperate.WebsiteOperateController.deletes # (P{sysback:websiteoperate:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-运营管理-商城信息配置菜单权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.paltcongfig.PaltCongfigController.toSetting # (P{sysback:paltcongfig:menu:set}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-运营管理-商城信息配置【保存】按钮权限 -->
+				<value>com.aebiz.b2b2c.websiteoperation.sysback.web.paltcongfig.PaltCongfigController.updatePlatConfig # (P{sysback:paltcongfig:button:save}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-订单统计菜单权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.orderreport.OrderReportController.orderReport # (P{sysback:orderreport:menu:report}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-商品数据统计菜单权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.productreport.ProductReportController.list # (P{sysback:productreport:menu:report}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-商品数据统计【导出】按钮权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.productreport.ProductReportController.expiredExport # (P{sysback:productreport:button:export}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-店铺收藏统计菜单权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.storefavoritereport.StoreFavoriteReportController.list # (P{sysback:storefavoritereport:menu:report}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-会员排行菜单权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.customerbuyreport.CustomerBuyReportController.list # (P{sysback:customerbuyreport:menu:report}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-商品收藏统计菜单权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.shopreport.ShopFavoritesReportController.shopfavoritesreport # (P{sysback:shopreport:menu:report}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-经营概况统计菜单权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.ordersurveyreport.OrderSurveyReportController.shopfavoritesreport # (P{sysback:ordersurveyreport:menu:report}) || R{SYSROLE}</value>
+				<!-- 后台-运营系统-报表统计-店铺销量统计菜单权限 -->
+				<value>com.aebiz.b2b2c.report.sysback.storesalesreport.StoreSalesReportController.list # (P{sysback:storesalesreport:menu:report}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-菜单管理菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmenu.SysMenuController.toList # (P{sysback:sysmenu:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-菜单管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmenu.SysMenuController.toAdd # (P{sysback:sysmenu:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-菜单管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmenu.SysMenuController.deletes # (P{sysback:sysmenu:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-菜单管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmenu.SysMenuController.toMultiUpdate # (P{sysback:sysmenu:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-部门管理菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysdept.SysDeptController.toList # (P{sysback:sysdept:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-部门管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysdept.SysDeptController.toAdd # (P{sysback:sysdept:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-部门管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysdept.SysDeptController.deletes # (P{sysback:sysdept:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-部门管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysdept.SysDeptController.toUpdate # (P{sysback:sysdept:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-部门管理【关联权限】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysdeptmenurel.SysDeptMenuRelController.toChoosePermit # (P{sysback:sysdept:button:toChoosePermit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-权限管理菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.syspermit.SysPermitController.toList # (P{sysback:syspermit:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-权限管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.syspermit.SysPermitController.toAdd # (P{sysback:syspermit:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-权限管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.syspermit.SysPermitController.deletes # (P{sysback:syspermit:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-权限管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.syspermit.SysPermitController.toUpdate # (P{sysback:syspermit:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-管理员管理菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmanager.SysManagerController.toList # (P{sysback:sysmanager:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-管理员管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmanager.SysManagerController.toAdd # (P{sysback:sysmanager:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-管理员管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmanager.SysManagerController.toUpdate # (P{sysback:sysmanager:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-管理员管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmanager.SysManagerController.deletes # (P{sysback:sysmanager:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-管理员管理【关联角色】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmanagerrolerel.SysManagerRoleRelController.toRelatedRole # (P{sysback:sysmanager:button:toRelatedRole}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-管理员管理【密码修改】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysmanager.SysManagerController.pwdreset # (P{sysback:sysmanager:button:pwdreset}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-角色管理菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysrole.SysRoleController.toList # (P{sysback:sysrole:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-角色管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysrole.SysRoleController.toAdd # (P{sysback:sysrole:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-角色管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysrole.SysRoleController.deletes # (P{sysback:sysrole:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-角色管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysrole.SysRoleController.toUpdate # (P{sysback:sysrole:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-系统菜单管理-角色管理【关联权限】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.sysrolemenurel.SysRoleMenuRelController.toChoosePermit # (P{sysback:sysrole:button:toChoosePermit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户权限管理菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatpermit.StorePlatPermitController.toList # (P{sysback:storeplatpermit:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户权限管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatpermit.StorePlatPermitController.toAdd # (P{sysback:storeplatpermit:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户权限管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatpermit.StorePlatPermitController.deletes # (P{sysback:storeplatpermit:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户权限管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatpermit.StorePlatPermitController.toUpdate # (P{sysback:storeplatpermit:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户菜单管理菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatmenu.StorePlatMenuController.toList # (P{sysback:storeplatmenu:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户菜单管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatmenu.StorePlatMenuController.toAdd # (P{sysback:storeplatmenu:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户菜单管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatmenu.StorePlatMenuController.deletes # (P{sysback:storeplatmenu:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-商户菜单管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatmenu.StorePlatMenuController.toMultiUpdate # (P{sysback:storeplatmenu:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-平台商户角色菜单权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatrole.StorePlatRoleController.toList # (P{sysback:storeplatrole:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-平台商户角色【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatrole.StorePlatRoleController.toAdd # (P{sysback:storeplatrole:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-平台商户角色【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatrole.StorePlatRoleController.deletes # (P{sysback:storeplatrole:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-平台商户角色【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatrole.StorePlatRoleController.toUpdate # (P{sysback:storeplatrole:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-系统管理-商户权限管理-平台商户角色【关联权限】按钮权限 -->
+				<value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatrolemenurel.StorePlatRoleMenuRelController.toChoosePermit # (P{sysback:storeplatrole:button:toChoosePermit}) || R{SYSROLE}</value>
+				<!-- <value>com.aebiz.b2b2c.baseframework.basecrud.service.BaseServiceImpl.getByCondition # (P{sysback:menu:view}) || R{admin12311}</value> -->
+			
+				<!-- 财务管理-提现申请管理权限设置 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.sysback.web.withdrawapply.WithdrawApplyController.toList # (P{sysback:withdrawapply:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.withdrawapply.WithdrawApplyController.expiredExportByCondition # (P{sysback:withdrawapply:button:exportbycondition}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.withdrawapply.WithdrawApplyController.reject # (P{sysback:withdrawapply:button:reject}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.withdrawapply.WithdrawApplyController.transfer # (P{sysback:withdrawapply:button:transfer}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.finance.sysback.web.withdrawapply.WithdrawApplyController.toInfo # (P{sysback:withdrawapply:button:info}) || R{SYSROLE}</value>
+				
+				<!-- 后台-模板管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.templates.DecorateTemplatesController.toList # (P{sysback:decorateTemplates:menu:list}) || R{SYSROLE}</value>
+				<!-- <value>com.aebiz.b2b2c.basebusiness.systembackmgr.web.store.storeplatrole.StorePlatRoleController.toAdd # (P{sysback:storeplatrole:button:add}) || R{SYSROLE}</value> -->
+				
+				<!-- 后台-模板皮肤管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.templatestyle.DecorateTemplateStyleController.toList # (P{sysback:decorateTemplateStyle:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.frontcomps.decorator.sysback.web.templatestyle.DecorateTemplateStyleController.toUpdate # (P{sysback:decorateTemplateStyle:button:toUpdate}) || R{SYSROLE}</value>
+				<value>com.aebiz.frontcomps.decorator.sysback.web.templatestyle.DecorateTemplateStyleController.toAdd # (P{sysback:decorateTemplateStyle:button:add}) || R{SYSROLE}</value>
+				<value>com.aebiz.frontcomps.decorator.sysback.web.templatestyle.DecorateTemplateStyleController.deletes # (P{sysback:decorateTemplateStyle:button:delete}) || R{SYSROLE}</value>
+				
+				<!-- 后台-组件分类管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.componentcategory.DecorateComponentCategoryController.toList # (P{sysback:decorateComponentCategory:menu:list}) || R{SYSROLE}</value>
+				<!-- 新增按钮权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.componentcategory.DecorateComponentCategoryController.toAdd # (P{sysback:decorateComponentCategory:button:add}) || R{SYSROLE}</value>
+				<!-- 编辑按钮权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.componentcategory.DecorateComponentCategoryController.toUpdate # (P{sysback:decorateComponentCategory:button:edit}) || R{SYSROLE}</value>
+				<!-- 删除按钮权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.componentcategory.DecorateComponentCategoryController.deletes # (P{sysback:decorateComponentCategory:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-组件分类管理 -->
+				
+				<!-- 后台-组件管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.components.DecorateComponentsController.toList # (P{sysback:decorateComponents:menu:list}) || R{SYSROLE}</value>
+				<!-- 新增按钮权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.components.DecorateComponentsController.toAdd # (P{sysback:decorateComponents:button:add}) || R{SYSROLE}</value>
+				<!-- 编辑按钮权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.components.DecorateComponentsController.toUpdate # (P{sysback:decorateComponents:button:edit}) || R{SYSROLE}</value>
+				<!-- 删除按钮权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.components.DecorateComponentsController.deletes # (P{sysback:decorateComponents:button:deletes}) || R{SYSROLE}</value>
+				<!-- 注册按钮权限 -->
+				<value>com.aebiz.frontcomps.decorator.sysback.web.components.DecorateComponentsController.toRegister # (P{sysback:decorateComponents:button:toRegister}) || R{SYSROLE}</value>
+				<!-- 后台-组件管理 -->
+				
+				<!-- 后台-CMS系统-站内信管理-站内信管理菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.innermessage.InnerMessageController.toList # (P{sysback:innermessage:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-站内信管理-站内信管理【发送站内信】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.innermessage.InnerMessageController.toAdd # (P{sysback:innermessage:button:replyMessage}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-商务服务管理-服务管理菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.consumerprotection.ConsumerProtectionController.toList # (P{sysback:consumerprotection:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-商务服务管理-服务管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.consumerprotection.ConsumerProtectionController.toAdd # (P{sysback:consumerprotection:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-商务服务管理-服务管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.consumerprotection.ConsumerProtectionController.deletes # (P{sysback:consumerprotection:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-商务服务管理-服务管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.consumerprotection.ConsumerProtectionController.toUpdate # (P{sysback:consumerprotection:button:edit}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-标签管理-标签管理菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.tags.TagsController.toList # (P{sysback:tags:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-标签管理-标签管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.tags.TagsController.toAdd # (P{sysback:tags:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-标签管理-标签管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.tags.TagsController.deletes # (P{sysback:tags:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-标签管理-标签管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.tags.TagsController.toUpdate # (P{sysback:tags:button:edit}) || R{SYSROLE}</value>
+				
+				<value>com.aebiz.b2b2c.cms.sysback.web.productappraise.ProductAppraiseController.expiredExportByCondition # (P{sysback:productapp:button:export}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-品牌管理-品牌历程菜单权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandCourseController.toList # (P{sysback:brandcourse:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌历程【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandCourseController.toAdd # (P{sysback:brandcourse:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌历程【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandCourseController.deletes # (P{sysback:brandcourse:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌历程【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandCourseController.toUpdate # (P{sysback:brandcourse:button:edit}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-品牌管理-品牌责任菜单权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandCourseController.toDutyList # (P{sysback:brandcourse:menu:dutylist}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌责任【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandCourseController.toDutyAdd # (P{sysback:brandcourse:button:dutyadd}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌责任【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandCourseController.toDutyUpdate # (P{sysback:brandcourse:button:dutyedit}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-品牌管理-品牌荣誉菜单权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandhonor.web.BrandHonorController.toList # (P{sysback:brandhonor:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌荣誉【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandHonorController.toAdd # (P{sysback:brandhonor:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌荣誉【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandHonorController.deletes # (P{sysback:brandhonor:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌荣誉【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.brandcourse.web.BrandHonorController.toUpdate # (P{sysback:brandhonor:button:edit}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-品牌管理-总裁信箱菜单权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.presidentemail.PresidentEmailController.toList # (P{sysback:presidentemail:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-总裁信箱【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.presidentemail.PresidentEmailController.deletes # (P{sysback:presidentemail:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-总裁信箱【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.userfront.sysback.web.presidentemail.PresidentEmailController.toInfo # (P{sysback:presidentemail:button:view}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-品牌管理-品牌新闻类型管理菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.brandnewscategory.BrandNewsCategoryController.toList # (P{sysback:brandnewscategory:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌新闻类型管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.brandnewscategory.BrandNewsCategoryController.toAdd # (P{sysback:brandnewscategory:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌新闻类型管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.brandnewscategory.BrandNewsCategoryController.deletes # (P{sysback:brandnewscategory:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌新闻类型管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.brandnewscategory.BrandNewsCategoryController.toUpdate # (P{sysback:brandnewscategory:button:edit}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-品牌管理-品牌新闻类型管理【关联内容】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.brandnewscategory.BrandNewsCategoryController.toRel # (P{sysback:brandnewscategory:button:rel}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-人力资源管理-简历管理菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.resume.ResumeController.toList # (P{sysback:resume:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-简历管理【删除】按钮权限 -->
+				<value>ccom.aebiz.b2b2c.cms.sysback.web.resume.ResumeController.deletes # (P{sysback:resume:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-简历管理【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.resume.ResumeController.toInfo # (P{sysback:resume:button:view}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-人力资源管理-加入我们菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.helpjoinus.HelpJionUsController.toList # (P{sysback:helpjoinus:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-加入我们【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.helpjoinus.HelpJionUsController.deletes # (P{sysback:helpjoinus:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-加入我们【查看】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.helpjoinus.HelpJionUsController.toInfo # (P{sysback:helpjoinus:button:view}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-人力资源管理-招聘管理菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitment.RecruitmentController.toList # (P{sysback:recruitment:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-招聘管理【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitment.RecruitmentController.toAdd # (P{sysback:recruitment:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-招聘管理【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitment.RecruitmentController.deletes # (P{sysback:recruitment:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-招聘管理【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.recruitment.RecruitmentController.toUpdate # (P{sysback:recruitment:button:edit}) || R{SYSROLE}</value>
+				
+				<!-- 后台-CMS系统-人力资源管理-部门体系菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.systemdept.SystemDeptController.toList # (P{sysback:systemdept:menu:list}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-部门体系【新增】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.systemdept.SystemDeptController.toAdd # (P{sysback:systemdept:button:add}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-部门体系【删除】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.systemdept.SystemDeptController.deletes # (P{sysback:systemdept:button:deletes}) || R{SYSROLE}</value>
+				<!-- 后台-CMS系统-人力资源管理-部门体系【编辑】按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.sysback.web.systemdept.SystemDeptController.toUpdate # (P{sysback:systemdept:button:edit}) || R{SYSROLE}</value>
+				
+				<!-- 后台-运营系统-推广佣金类型配置菜单权限 -->
+				<value>com.aebiz.b2b2c.commissiontype.sysback.web.productcategorycommissiontype.ProductCategoryCommissionTypeController.toList # (P{sysback:commissiontype:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.commissiontype.sysback.web.productcategorycommissiontype.ProductCategoryCommissionTypeController.toAdd # (P{sysback:commissiontype:button:toAdd}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.commissiontype.sysback.web.productcategorycommissiontype.ProductCategoryCommissionTypeController.toUpdate # (P{sysback:commissiontype:button:toUpdate}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.commissiontype.sysback.web.productcategorycommissiontype.ProductCategoryCommissionTypeController.deletes # (P{sysback:commissiontype:button:delete}) || R{SYSROLE}</value>
+       			<value>com.aebiz.b2b2c.commissiontype.sysback.web.productcategorycommissiontype.ProductCategoryCommissionTypeController.toImport # (P{sysback:commissiontype:button:toImport}) || R{SYSROLE}</value>
+       			
+       			<!-- 用户APP二级页面上传菜单权限 -->
+				<value>com.aebiz.b2b2c.mobiledecorate.sysback.web.wapuploadFile.AppUploadFileController.toList # (P{sysback:appuploadfile:menu:list}) || R{SYSROLE}</value>	
+			</list>
+		</property>
+		
+		<property name="storeList">
+			<list>
+				<!--商品管理零 售商品列表 -->
+				<!-- 发布商品菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:menu:addProduct})</value>
+				<!-- 发布商品类型按钮权限 -->
+
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:type_ordinary})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:type_exhibition})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:type_o2o})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:type_customized})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:type_coupon})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:type_commercial})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:type_suit})</value>
+				<!--商品管理零 售商品列表 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toList # (P{product:menu:list})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.updateUnStateShelves # (P{product:button:off})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toStep1 # (P{product:button:add})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.deletes # (P{product:button:deletes})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.alldeletes # (P{product:button:alldeletes})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.o2odeletes # (P{product:button:o2odeletes})</value>
+				<!-- 待售O2O商品 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.o2owaitdeletes # (P{product:button:o2owaitdelete})</value>
+				<!-- 待售商品管理 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.allwaitdeletes # (P{product:button:allwaitdeletes})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.expiredExportByCondition # (P{product:button:export})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.expiredExport # (P{product:button:export})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toExport # (P{product:button:toExport})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toUpdate # (P{product:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productgroup.ProductGroupController.toProductGroupAdd # (P{product:button:toProductGroupAdd})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productgroup.ProductGroupController.toProductGroupList # (P{product:button:toProductGroupList})</value>
+				<!-- 待售零售商品 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toWaitList # (P{product:menu:toWaitList})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toAllWaitList # (P{product:menu:toAllWaitList})</value>		
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toO2oList # (P{product:menu:toO2oList})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toO2oWaitList # (P{product:menu:toO2oWaitList})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.toCustomizationList # (P{productcommercial:menu:toCustomizationList})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.toWaitCustomizationList # (P{productcommercial:menu:toWaitCustomizationList})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.toList # (P{productcommercial:menu:toList})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.toWaitList # (P{productcommercial:menu:toWaitList})</value>
+				
+			 
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCouponController.toList # (P{productcoupon:menu:toList})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCouponController.toWaitList # (P{productcoupon:menu:toWaitList})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductSuitController.toList # (P{productsuit:menu:toList})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductSuitController.toWaitList # (P{productsuit:menu:toWaitList})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductExhibitionController.toList # (P{productexhibition:menu:toList})</value>
+				
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.updateStateShelves # (P{product:button:upShelves})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.toUpdate # (P{productcommercial:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.cuswaitdeletes # (P{productcommercial:button:cuswaitdeletes})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.commercialdeletes # (P{productcommercial:button:commercialdeletes})</value>
+				<!-- 商用商品删除按钮权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.comwaitdeletes # (P{productcommercial:button:comwaitdeletes})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCommercialController.deletes # (P{productcommercial:button:deletes})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCouponController.toUpdate # (P{productcoupon:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCouponController.deletes # (P{productcoupon:button:delete})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductCouponController.waitdeletes # (P{productcoupon:button:waitdelete})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductSuitController.toUpdate # (P{productsuit:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductSuitController.deletes # (P{productsuit:button:delete})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductSuitController.auditdelete # (P{sysback:suitproduct:button:auditdelete})</value>
+				
+				<!-- 待售套装商品 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductSuitController.waitdelete # (P{productsuit:button:waitdelete})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductExhibitionController.toUpdate # (P{productexhibition:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductExhibitionController.deletes # (P{productexhibition:button:delete})</value>
+				
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductExhibitionController.waitdeletes # (P{productexhibition:button:waitdelete})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.producttransfertemplaterel.ProductTransfertemplateRelController.toList # (P{product:button:producttransfertemplaterel})</value>
+				
+				<!--商品详情页模板  菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productinfotemplate.ProductInfoTemplateController.toTemplateInfo # (P{product:menu:toTemplateInfo})</value>
+				
+				
+				<!--商品评论管理  菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.storeback.web.productappraise.StoreProductAppraiseController.toList # (P{productappraise:menu:toList})</value>
+				
+				<!--商品评论管理  按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.storeback.web.productappraise.StoreProductAppraiseController.expiredExportByCondition # (P{productappraise:button:export})</value>
+				<value>com.aebiz.b2b2c.cms.storeback.web.productappraise.StoreProductAppraiseController.expiredExport # (P{productappraise:button:export})</value>
+				<value>com.aebiz.b2b2c.cms.storeback.web.productappraise.StoreProductAppraiseController.toView # (P{productappraise:button:toView})</value>
+				
+				
+				<!--商品评论标签管理  菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.storeback.web.evaluatetags.EvaluateTagsController.toList # (P{evaluatetags:menu:toList})</value>
+				
+				<!--商品评论标签管理  按钮权限 -->
+				<value>com.aebiz.b2b2c.cms.storeback.web.evaluatetags.EvaluateTagsController.toAdd # (P{evaluatetags:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.cms.storeback.web.evaluatetags.EvaluateTagsController.toUpdate # (P{evaluatetags:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.cms.storeback.web.evaluatetags.EvaluateTagsController.deletes # (P{evaluatetags:button:delete})</value>
+				
+				
+				<!--价格管理  菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.toList # (P{productmainbaseprice:menu:toList})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.toReport # (P{productmainbaseprice:menu:toReport})</value>
+				
+				<!--价格管理  按钮权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.expiredExportByCondition # (P{productmainbaseprice:button:export})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.expiredExport # (P{productmainbaseprice:button:export})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.expiredReportExport # (P{productmainbaseprice:button:exportReport})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.expiredReportExportByCondition # (P{productmainbaseprice:button:exportReport})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.toUpdate # (P{productmainbaseprice:button:setPrice})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductTempController.toExport # (P{productmainbaseprice:button:setPrice})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.toTimeSpaceList # (P{productmainbaseprice:button:setTimeSpacePrice})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productmainbaseprice.ProductMainBasePriceController.toTimeSpacePrice # (P{productmainbaseprice:button:setTimeSpacePrice})</value>
+				
+					
+				<!-- 价格审核管理  菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.basepricemodifylog.BasePriceModifyLogController.toList # (P{basepricemodifylog:menu:toList})</value>
+				
+				<!--价格审核管理   按钮权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.basepricemodifylog.BasePriceModifyLogController.batchAudit # (P{basepricemodifylog:button:batchAudit})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.basepricemodifylog.BasePriceModifyLogController.expiredExport # (P{basepricemodifylog:button:export})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.basepricemodifylog.BasePriceModifyLogController.expiredExportByCondition # (P{basepricemodifylog:button:export})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.basepricemodifylog.BasePriceModifyLogController.toInfo # (P{basepricemodifylog:button:toInfo})</value>
+				<!--可售区域模板  菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productregiontemplate.ProductRegionTemplateController.toList # (P{productregiontemplate:menu:toList})</value>
+				<!--可售区域模板  菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productregiontemplate.ProductRegionTemplateController.toAdd # (P{productregiontemplate:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productregiontemplate.ProductRegionTemplateController.toUpdate # (P{productregiontemplate:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productregiontemplate.ProductRegionTemplateController.deletes # (P{productregiontemplate:button:delete})</value>
+				
+				<!-- 商户自定义分类 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productcategorystore.StoreProductCategoryStoreController.toList # (P{productcategorystore:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productcategorystore.StoreProductCategoryStoreController.toList # (P{productcategorystore:button:save})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productcategorystore.StoreProductCategoryStoreController.getPosition # (P{productcategorystore:button:getPosition})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productcategorystore.StoreProductCategoryStoreController.uploadFile # (P{productcategorystore:button:uploadFile})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productcategorystore.StoreProductCategoryStoreController.delete # (P{productcategorystore:button:delete})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productcategorystore.StoreProductCategoryStoreController.update # (P{productcategorystore:button:update})</value>
+				<!-- <value>com.aebiz.b2b2c.product.storeback.web.productcategorystore.StoreProductCategoryStoreController.productList # (P{productcategorystore:button:productcategorystore:button:relationProduct})</value> -->
+				<!-- 图片空间管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productimagelibrary.ProductImageLibraryController.toList # (P{productimagelibrary:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.productimagecategory.StoreProductImageCategoryController.save # (P{productimagecategory:button:save})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productimagecategory.StoreProductImageCategoryController.updateCategory # (P{productimagecategory:button:updateCategory})</value>
+				<value>com.aebiz.b2b2c.product.storeback.web.productimagecategory.StoreProductImageCategoryController.deleteCategory # (P{productimagecategory:button:deleteCategory})</value>
+				<!-- 福利券类型管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.welfaretype.WelfareTypeController.toList # (P{welfaretype:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.welfaretype.WelfareTypeController.toAdd # (P{welfaretype:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.welfaretype.WelfareTypeController.deletes # (P{welfaretype:button:deletes})</value>
+				<!-- 福利券明细管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.welfaredetails.WelfareDetailsController.toList # (P{welfaredetails:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.welfaredetails.WelfareDetailsController.export # (P{welfaredetails:button:export})</value>
+				
+				<!-- 会员管理会员等级管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customerstorelevel.CustomerStoreLevelController.toList # (P{customerstorelevel:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customerstorelevel.CustomerStoreLevelController.toAdd # (P{customerstorelevel:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customerstorelevel.CustomerStoreLevelController.deletes # (P{customerstorelevel:button:deletes})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customerstorelevel.CustomerStoreLevelController.toUpdate # (P{customerstorelevel:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customerstorelevel.CustomerStoreLevelController.expiredExportByCondition # (P{customerstorelevel:button:export})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customerstorelevel.CustomerStoreLevelController.expiredExport # (P{customerstorelevel:button:export})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customerstorelevel.CustomerStoreLevelController.toView # (P{customerstorelevel:button:toView})</value>
+				<!-- 会员信息管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customer.StoreCustomerController.toList # (P{customer:menu:toList})</value>
+			 	<!-- 商户会员管理 按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customer.StoreCustomerController.toView # (P{customer:button:toView})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.customer.StoreCustomerController.sendCoupon # (P{customer:button:toSendCoupon})</value>
+				
+				<!-- 商户会员管理 菜单权限 -->
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomer.StoreCustomerRelController.toList # (P{storecustomer:menu:toList})</value>
+				
+				<!-- 商户会员管理 按钮权限 -->
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomer.StoreCustomerRelController.toPush # (P{storecustomer:button:toPush})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomer.StoreCustomerRelController.toAdd # (P{storecustomer:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomer.StoreCustomerRelController.toImport # (P{storecustomer:button:toImport})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomer.StoreCustomerRelController.exportByCondition # (P{storecustomer:button:export})</value>
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomer.StoreCustomerRelController.exports # (P{storecustomer:button:export})</value>
+				
+				<!-- 我的店铺站内信 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.storeback.web.innermessage.InnerMessageController.toList # (P{innermessage:menu:toList})</value>
+				 <!-- 站内信管理 菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.storeback.web.innermessage.InnerMessageController.send # (P{innermessage:button:replyMessage})</value>
+	      		<value>com.aebiz.b2b2c.cms.storeback.web.innermessage.InnerMessageController.removes # (P{innermessage:button:removes})</value>
+				<!-- 消息提醒 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.cms.storeback.web.messageremind.StoreMessageRemindController.showMessageRemindList # (P{messageremind:menu:showMessageRemindList})</value>
+				<value>com.aebiz.b2b2c.cms.storeback.web.messageremind.StoreMessageRemindController.saveSet # (P{messageremind:button:saveSet)</value>
+				<value>com.aebiz.b2b2c.cms.storeback.web.messageremind.StoreMessageRemindController.returnDefault # (P{messageremind:button:returnDefault)</value>
+	
+				<!-- 商户资料管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storeaccount.StoreAccountController.toInfo # (P{storeaccount:menu:toInfo})</value>
+				<!-- 商户设置 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storecomplex.StoreComplexController.toSettingStore # (P{storecomplex:menu:toSettingStore})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storecomplex.StoreComplexController.updateCompanyInfo # (P{storecomplex:button:updateCompanyInfo})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storecomplex.StoreComplexController.updateBasicParam # (P{storecomplex:button:updateBasicParam})</value>
+	
+				<!-- 店铺导航管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.decorateplatform.storeback.web.storeNavigation.StoreNavigationController.toList # (P{storeNavigation:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.decorateplatform.storeback.web.storeNavigation.StoreNavigationController.toStep1 # (P{storeNavigation:button:add})</value>
+				<value>com.aebiz.b2b2c.decorateplatform.storeback.web.storeNavigation.StoreNavigationController.deletes # (P{storeNavigation:button:deletes})</value>
+				<value>com.aebiz.b2b2c.decorateplatform.storeback.web.storeNavigation.StoreNavigationController.toUpdate # (P{storeNavigation:button:toUpdate})</value>
+				<!-- 安全设置-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storecomplex.StoreComplexController.toSetting # (P{storecomplex:menu:toSetting})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storecomplex.StoreComplexController.toUpdatePassword # (P{storecomplex:button:toUpdatePassword})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storecomplex.StoreComplexController.toUpdateMobile # (P{storecomplex:button:toUpdateMobile})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storecomplex.StoreComplexController.toUpdateEmail # (P{storecomplex:button:toUpdateEmail})</value>
+				<!-- 部门管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storedept.StoreDeptController.toList # (P{storedept:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storedept.StoreDeptController.toAdd # (P{storedept:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storedept.StoreDeptController.deletes # (P{storedept:button:deletes})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storedept.StoreDeptController.toUpdate # (P{storedept:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storedeptmenurel.StoreDeptMenuRelController.toChoosePermit # (P{storedept:button:toChoosePermit})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storerole.StoreRoleController.toAddRole # (P{storedept:button:toAddRole})</value>
+				<!-- 角色管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storerole.StoreRoleController.toList # (P{storerole:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storerole.StoreRoleController.toAdd # (P{storerole:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storerole.StoreRoleController.deletes # (P{storerole:button:deletes})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storerole.StoreRoleController.toUpdate # (P{storerole:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storedeptmenurel.StoreDeptMenuRelController.toChoosePermit # (P{storerole:button:toChoosePermit})</value>
+				<!-- 员工管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storeemployee.StoreEmployeeController.toList # (P{storeemployee:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.store.storeback.web.storeemployee.StoreEmployeeController.toAdd # (P{storeemployee:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storeemployee.StoreEmployeeController.deletes # (P{storeemployee:button:deletes})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storeemployee.StoreEmployeeController.toUpdate # (P{storeemployee:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storeemployeerolerel.StoreEmployeeRoleRelController.toEmployeeRoleRel # (P{storeemployee:button:toEmployeeRoleRel})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storeemployee.StoreEmployeeController.pwdreset # (P{storeemployee:button:pwdreset})</value>
+				<value>com.aebiz.b2b2c.store.storeback.web.storeemployee.StoreEmployeeController.setToCustomerService # (P{storeemployee:button:setToCustomerService})</value>
+				
+				<!-- 财务管理-发票设置-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.storeback.web.storeinvoiceset.StoreInvoiceSetController.toList # (P{storeinvoiceset:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.finance.storeback.web.storeinvoiceset.StoreInvoiceSetController.add # (P{storeinvoiceset:button:add})</value>
+				<!-- 开具订单发票管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.toList # (P{invoice:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.exportsByCondition # (P{invoice:button:exports})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.exports # (P{invoice:button:exports})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.exportsNoBilling # (P{invoice:button:exportsNoBilling})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.toImport # (P{invoice:button:toImport})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.toInfo # (P{invoice:button:toInfo})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.toUpdate # (P{invoice:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.invoice.StoreInvoiceController.toUpdate # (P{invoice:button:toInvoice)</value>
+				
+				<!-- 库存系统商品库存管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productattrstock.ProductAttrStockController.toList # (P{productattrstock:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productattrstock.ProductAttrStockController.toExport # (P{productattrstock:button:exports})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productattrstock.ProductAttrStockController.toExportByCondition # (P{productattrstock:button:exports})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productwarehousing.ProductWarehousingController.toBuckOperate # (P{productattrstock:button:batchStorage})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productoutofwarehous.ProductOutOfWarehousController.toBuckOperate # (P{productattrstock:button:batchOutstorage})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productwarehousing.ProductWarehousingController.toBuckOperate # (P{productattrstock:button:productwarehousingtoAdd})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productoutofwarehous.ProductOutOfWarehousController.toBuckOperate # (P{productattrstock:button:productoutofwarehoustoAdd})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productattrstock.ProductAttrStockController.expiredExportByCondition # (P{productattrstock:button:export})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productattrstock.ProductAttrStockController.expiredExport # (P{productattrstock:button:export})</value>
+				<!-- 库存系统-商品入库管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productwarehousing.ProductWarehousingController.toList # (P{productwarehousing:menu:toList})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productwarehousing.ProductWarehousingController.expiredExport # (P{productwarehousing:button:export})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productwarehousing.ProductWarehousingController.expiredExportByCondition # (P{productwarehousing:button:export})</value>
+				
+				<!-- 库存系统-商品出库管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productoutofwarehous.ProductOutOfWarehousController.toList # (P{productoutofwarehous:menu:toList})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productoutofwarehous.ProductOutOfWarehousController.expiredExport # (P{productoutofwarehous:button:export})</value>
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productoutofwarehous.ProductOutOfWarehousController.expiredExportByCondition # (P{productoutofwarehous:button:export})</value>
+				
+				<!-- 报表系统交易数据分析 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.report.storeback.transaction.StoreTransactionReportController.transactionReport # (P{transaction:menu:transactionReport})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.report.storeback.transaction.StoreTransactionReportController.expiredExport # (P{transaction:button:exports})</value>
+				<!-- 报表系统-商家运营概况 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.report.storeback.businessoperationreport.BusinessOperationReportController.toReport # (P{businessoperationreport:menu:toReport})</value>
+				<!-- 报表系统-业务数据分析 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.report.storeback.businessDataAnalysis.BusinessDataReportController.list # (P{businessDataAnalysis:menu:list})</value>
+				<!-- 报表系统-商品销售分析 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.report.storeback.saleanalysereport.SaleAnalyseReportController.list # (P{saleanalysereport:menu:list})</value>
+				
+				<!-- 促销系统可报名促销 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toList # (P{promotiondefine:menu:toList})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toAttendList # (P{promotiondefine:menu:toAttendListbg})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.stopPromotion # (P{promotiondefine:button:stopPromotion})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toUpdate # (P{promotiondefine:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toAdd # (P{promotiondefine:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toPromotionInfo # (P{promotiondefine:button:toPromotionInfo})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.copyPromotion # (P{promotiondefine:button:copyPromotion})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.deletes # (P{promotiondefine:button:deletePromotions})</value>
+				
+				<!-- 促销系统已报名促销 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionstoreattend.PromotionStoreAttendController.toList # (P{promotionstoreattend:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionstoreattend.PromotionStoreAttendController.exports # (P{promotionstoreattend:button:exports})</value>
+				<!-- 促销系统优惠券类型管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontype.CouponTypeController.toList # (P{coupontype:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontype.CouponTypeController.toAdd # (P{promotionstoreattend:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontype.CouponTypeController.toUpdate # (P{promotionstoreattend:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontype.CouponTypeController.deletes # (P{promotionstoreattend:button:deletes})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontype.CouponTypeController.toInfo # (P{promotionstoreattend:button:toInfo})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontype.CouponTypeController.expiredExportByCondition # (P{promotionstoreattend:button:export})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontype.CouponTypeController.expiredExport # (P{promotionstoreattend:button:export})</value>
+				
+				<!-- 优惠券批次 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.couponbatch.CouponBatchController.toList # (P{couponbatch:button:toList})</value>
+				<!-- 优惠券批次 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.couponbatch.CouponBatchController.toAdd # (P{couponbatch:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.couponbatch.CouponBatchController.expiredExportByCondition # (P{couponbatch:button:export})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.couponbatch.CouponBatchController.expiredExport # (P{couponbatch:button:export})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.couponbatch.CouponBatchController.createCoupon # (P{couponbatch:button:createCoupon})</value>
+				
+				
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupontypeproductrel.CouponTypeProductRelController.toList # (P{coupontypeproductrel:button:toList})</value>
+				<!-- 促销系统优惠券明细管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupondetails.CouponDetailsController.toList # (P{coupondetails:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupondetails.CouponDetailsController.export # (P{coupondetails:button:exports})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupondetails.CouponDetailsController.toInfo # (P{coupondetails:button:toInfo})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.coupondetails.CouponDetailsController.cancellation # (P{coupondetails:button:cancellation})</value>
+				
+				<value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomer.StoreCustomerRelController.couponQueryCustomer # (P{coupondetails:button:senddetail})</value>
+				
+				<!-- 促销系统营销组件管理 -->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionprivilege.PromotionPrivilegeController.toList # (P{promotionprivilege:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionprivilege.PromotionPrivilegeController.toUpdate # (P{promotionprivilege:button:toUpdate})</value>
+				<!-- 促销系统组件订单管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionprivilegeorder.PromotionPrivilegeOrderController.toList # (P{promotionprivilegeorder:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionprivilegeorder.PromotionPrivilegeOrderController.promotionprivilegeorderExport # (P{promotionprivilegeorder:button:exports})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionprivilegeorder.PromotionPrivilegeOrderController.toInfo # (P{promotionprivilegeorder:button:toInfo})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionprivilegeorder.PromotionPrivilegeOrderController.payContinue # (P{promotionprivilegeorder:button:payContinue})</value>
+				<!-- 促销系统促销规则定义管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionusedefine.PromotionUseDefineController.toList # (P{promotionusedefine:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionusedefine.PromotionUseDefineController.toAdd # (P{promotionusedefine:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotionusedefine.PromotionUseDefineController.toInfoModel # (P{promotionusedefine:button:toInfoModel})</value>
+				<!-- 促销系统促销活动管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toAttendList # (P{promotiondefine:menu:toAttendList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toAdd # (P{promotiondefine:button:toAdd})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.deletes # (P{promotiondefine:button:deletes})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toUpdate # (P{promotiondefine:button:toUpdate})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toProductList # (P{promotiondefine:button:toProductList})</value>
+				<value>com.aebiz.b2b2c.promotion.storeback.web.promotiondefine.PromotionDefineController.toGiftList # (P{promotiondefine:button:toGiftList})</value>
+				
+				<!-- 订单系统普通订单管理-->
+				<!-- 订单管理 菜单权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.list # (P{ordermain:menu:list})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.exportsByCondition # (P{ordermain:button:exports})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.exports # (P{ordermain:button:exports})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.View # (P{ordermain:button:view})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.cancel # (P{ordermain:button:cancelOrder})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.edit # (P{ordermain:button:edit})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.toView # (P{ordermain:button:goSendGoodsButton})</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.view # (P{ordermain:button:afterSaleView})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.orderstamp.OrderStampController.getStamp # (P{ordermain:button:getStamp})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.viewLogistics # (P{ordermain:button:viewLogistics})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.updateAddress # (P{ordermain:button:updateAddress})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.viewAfterSale # (P{ordermain:button:viewAfterSale})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.handNotifyUrl # (P{ordermain:button:handNotifyUrl})</value>
+				
+				<!-- 新品试用订单管理 菜单权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.ontrialList # (P{ordermain:menu:ontrialList})</value>
+			    <value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.ontrialView # (P{ordermain:button:ontrialView})</value>
+			    <value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.auditOntrialAuditState # (P{ordermain:button:auditOntrialAuditState})</value>
+			    <value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderMainController.toOrderOntrialReport # (P{ordermain:button:toOrderOntrialReport})</value>
+				
+				<!-- 订单系统售后管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.toList # (P{orderaftersale:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.toExportByCondition # (P{orderaftersale:button:exports})</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.exports # (P{orderaftersale:button:exports})</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.view # (P{orderaftersale:button:view})</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.cancel # (P{orderaftersale:button:cancel})</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.confirmAfterService # (P{orderaftersale:button:confirmAfterService})</value>
+				<value>com.aebiz.b2b2c.orderaftersaleservice.storeback.web.orderaftersaleservicemain.OrderAfterSaleStoreController.receiveGoodsAndMoney # (P{orderaftersale:button:receiveGoods})</value>
+				
+				<!-- 订单系统待发货订单管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.toWatingList # (P{deliveryorder:menu:toWatingList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.toExportByCondition # (P{deliveryorder:button:exports})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.exports # (P{deliveryorder:button:exports})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.toView # (P{deliveryorder:button:toView})</value>
+				<!-- 订单系统发货单管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.toList # (P{deliveryorder:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.exportTwoByCondition # (P{deliveryorder:button:exportDataTwo})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.exportTwo # (P{deliveryorder:button:exportDataTwo})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.toInfo # (P{deliveryorder:button:toInfo})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.exportAll # (P{deliveryorder:button:exportAll})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryorder.DeliveryOrderController.importDeliveryOrder # (P{deliveryorder:button:importDeliveryOrde})</value>
+				<!-- 订单系统物流模板管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryset.DeliverySetController.toManage # (P{deliveryset:menu:toManage})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryset.DeliverySetController.save # (P{deliveryset:button:toSave})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.transfertemplate.TransferTemplateController.toProductUpdate # (P{deliveryset:button:toProductUpdate})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.transfertemplate.TransferTemplateController.toStoreAdd # (P{deliveryset:button:toStoreAdd})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.transfertemplate.TransferTemplateController.del # (P{deliveryset:button:deleteTemp})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.transfertemplate.TransferTemplateController.toStoreUpdate # (P{deliveryset:button:edit})</value>
+				<value>com.aebiz.b2b2c.shipment.storeback.web.transfertemplate.TransferTemplateController.toDefaultUpdate # (P{deliveryset:button:edit})</value>
+				<!-- 订单系统收货地址管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.storeaddress.StoreAddressController.toAddress # (P{storeaddress:menu:toAddress})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.storeaddress.StoreAddressController.save # (P{storeaddress:button:save})</value>
+				<!-- 订单系统账单管理-->
+				<!-- 菜单权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.splitsummary.SplitSummaryController.toList # (P{splitsummary:menu:toList})</value>
+				<!-- 按钮权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.splitdetail.SplitDetailController.toList # (P{splitsummary:button:toSplitDetail})</value>
+				<!-- 退款单菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.storeback.web.orderreturnmoneymain.OrderReturnMoneyMainController.toList # (P{returnMoney:menu:list})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.orderreturnmoneymain.OrderReturnMoneyMainController.toInfo # (P{returnMoney:button:toInfo})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.orderreturnmoneymain.OrderReturnMoneyMainController.expiredExportByCondition # (P{returnMoney:button:exports})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.orderreturnmoneymain.OrderReturnMoneyMainController.expiredExport # (P{returnMoney:button:exports})</value>
+				<value>com.aebiz.b2b2c.finance.storeback.web.orderreturnmoneymain.OrderReturnMoneyMainController.delete # (P{returnMoney:button:delete})</value>
+				
+				<!-- 移动端配置菜单权限 -->
+				<value>com.aebiz.b2b2c.mobiledecorate.storeback.web.mobilecomponents.StoreMobileComponentsController.toList # (P{storeback:mobileset:list})</value>
+				<value>com.aebiz.b2b2c.mobiledecorate.storeback.web.mobilecomponents.StoreMobileComponentsController.add # (P{storeback:mobileset:add})</value>
+				<value>com.aebiz.b2b2c.mobiledecorate.storeback.web.mobilecomponents.StoreMobileComponentsController.update # (P{storeback:mobileset:update})</value>
+				
+				<!-- 定制单/意向单 菜单权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.specificlservice.SpecificlServiceController.toList # (P{storeback:specificlservice:menu:toList})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.specificlservice.SpecificlServiceController.toIntentionList # (P{storeback:specificlservice:menu:toIntentionList})</value>
+				
+				<!-- 定制单/意向单按钮权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.specificlservice.SpecificlServiceController.view # (P{storeback:specificlservice:button:view})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.specificlservice.SpecificlServiceController.intentionView # (P{storeback:specificlservice:button:intentionView})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.specificlservice.SpecificlServiceController.expiredExportByCondition # (P{storeback:pecificlservice:button:exports})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.specificlservice.SpecificlServiceController.expiredExport # (P{storeback:pecificlservice:button:exports})</value>
+	
+				<!-- 物流模版 按钮权限 -->
+				<value>com.aebiz.b2b2c.shipment.storeback.web.deliveryset.DeliverySetController.toProductAdd # (P{deliveryset:button:toProductAdd})</value>
+				
+				<!-- 退款单菜单权限 -->
+				<value>com.aebiz.b2b2c.finance.storeback.web.orderreturnmoneymain.OrderReturnMoneyMainController.toInfo # (P{returnMoney:button:list})</value>
+				
+				<!-- 订单售后渠道设置 菜单权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderAfterChannelSettingController.toList # (P{orderafterchannelsetting:menu:toList})</value>
+				<!-- 订单售后渠道设置 按钮权限 -->
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderAfterChannelSettingController.changeState # (P{orderafterchannelsetting:button:compensate})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderAfterChannelSettingController.expiredExportByCondition # (P{orderafterchannelsetting:button:exports})</value>
+				<value>com.aebiz.b2b2c.order.storeback.web.ordermain.OrderAfterChannelSettingController.expiredExport # (P{orderafterchannelsetting:button:exports})</value>
+				
+	       		 <!-- 会员类型转换管理 菜单权限 -->
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.toChangeTypeList # (P{storecustomertypechangeaudit:menu:toChangeTypeList})</value>
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.toList # (P{storecustomertypechangeaudit:menu:toList})</value>
+				 <!-- 会员类型转换管理 按钮权限 -->
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.expiredExportByCondition # (P{storecustomertypechangeaudit:button:export})</value>
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.expiredExport # (P{storecustomertypechangeaudit:button:export})</value>
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.toAddAudit # (P{storecustomertypechangeaudit:button:toAddAudit})</value>
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.toInfo # (P{storecustomertypechangeaudit:button:toInfo})</value>
+	       
+	       		 <!-- 会员类型转换管理 菜单权限 -->
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.batchAudit # (P{storecustomertypechangeaudit:button:batchAudit})</value>
+	       		 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.toUpdate # (P{storecustomertypechangeaudit:button:toUpdate})</value>
+				 <value>com.aebiz.b2b2c.customermgr.storeback.web.storecustomertypechangeaudit.StoreCustomertypeChangeAuditController.toAudit # (P{storecustomertypechangeaudit:button:toAudit})</value>
+	
+		        <!-- 会员积分管理 菜单权限 -->
+		        <value>com.aebiz.b2b2c.vipclub.storeback.web.vipclubintegralstat.VipclubIntegralStatController.toList # (P{vipclubintegralstat:menu:toList})</value>
+		        <!-- 会员积分管理 按钮权限 -->
+		        <value>com.aebiz.b2b2c.vipclub.storeback.web.vipclubintegralstat.VipclubIntegralStatController.expiredExportByCondition # (P{vipclubintegralstat:button:export})</value>
+		        <value>com.aebiz.b2b2c.vipclub.storeback.web.vipclubintegralstat.VipclubIntegralStatController.expiredExport # (P{vipclubintegralstat:button:export})</value>
+		        <value>com.aebiz.b2b2c.vipclub.storeback.web.vipclubintegralstat.VipclubIntegralStatController.toLogList # (P{vipclubintegralstat:button:toLogList})</value>
+		        
+		        <!-- 门店管理 菜单权限 -->
+		        <value>com.aebiz.b2b2c.store.storeback.web.substore.SubStoreController.toList # (P{substore:menu:toList})</value>
+		         <!-- 门店管理 按钮权限 -->
+		         <value>com.aebiz.b2b2c.store.storeback.web.substore.SubStoreController.toUpdate # (P{substore:button:toUpdate})</value>
+		         <value>com.aebiz.b2b2c.store.storeback.web.substore.SubStoreController.toAdd # (P{substore:button:toAdd})</value>
+		         <value>com.aebiz.b2b2c.store.storeback.web.substore.SubStoreController.toImport # (P{substore:button:toImport})</value>
+		         <value>com.aebiz.b2b2c.store.storeback.web.substore.SubStoreController.deletes # (P{substore:button:delete})</value>
+		         
+		         <!-- 促销活动管理 菜单权限 -->
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.toList # (P{promotionactivtyinfo:menu:toList})</value>
+		         <!-- 促销活动管理 按钮权限 -->
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.expiredExportByCondition # (P{promotionactivtyinfo:button:export})</value>
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.expiredExport # (P{promotionactivtyinfo:button:export})</value>
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.toAdd # (P{promotionactivtyinfo:button:toAdd})</value>
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.toInfo # (P{promotionactivtyinfo:button:toInfo})</value>
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.toUpdate # (P{promotionactivtyinfo:button:toUpdate})</value>
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.toProductList # (P{promotionactivtyinfo:button:toProductList})</value>
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.stopActivity # (P{promotionactivtyinfo:button:stopActivity})</value>
+		          <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.toExport # (P{promotionactivtyinfo:button:toExport})</value>
+				  <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.copyActivity # (P{promotionactivtyinfo:button:copyActivity})</value>
+				  <value>com.aebiz.b2b2c.promotion.storeback.web.activity.PromotionActivtyInfoController.deletes # (P{promotionactivtyinfo:button:deletes})</value>
+	             <!-- 促销规则模板 菜单权限 -->
+		         <value>com.aebiz.b2b2c.promotion.storeback.web.activityrule.ActivityRuleController.toList # (P{activityrulecontroller:menu:toList})</value>
+				
+				<!-- 商品预览权限 -->
+				<value>com.aebiz.b2b2c.product.frontback.web.productdetail.FrontProductController.toProductView # (P{storeback:fromtproduct:button:toProductView})}</value>
+				<!-- 出售商品管理菜单权限 -->
+				<value>com.aebiz.b2b2c.product.storeback.web.product.StoreProductOrdinaryController.toAllSaleList # (P{product:menu:toAllSaleList})</value>		
+			
+				<!-- 库存锁定明细  -->
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productstocklocklog.ProductStockLockLogController.toList # (P{productStockLockLog:menu:toList})</value>	
+				<!-- 库存锁定查看明细按钮 -->
+				<value>com.aebiz.b2b2c.productstock.storeback.web.productstocklockreducelog.ProductStockLockReduceLogController.toList # (P{productStockLockLog:button:toDetailView})</value>	
+				
+				<!-- 家装阶段管理 -->
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.decorationstage.DecorationStageController.toList # (P{sysback:decorationstage:menu:list}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.decorationstage.DecorationStageController.toAdd # (P{sysback:decorationstage:button:toAdd}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.decorationstage.DecorationStageController.toInfo # (P{sysback:decorationstage:button:toInfo}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.decorationstage.DecorationStageController.toUpdate # (P{sysback:decorationstage:button:toUpdate}) || R{SYSROLE}</value>
+				<value>com.aebiz.b2b2c.customermgr.sysback.web.decorationstage.DecorationStageController.deletes # (P{sysback:decorationstage:button:deletes}) || R{SYSROLE}</value>
+			</list>
+			</property>
+		</bean>
+		
+	<!-- 
+	<aop:config >
+		<aop:aspect id="myaop" ref="aebizShiroAop">
+			<aop:pointcut id="myPointCut"expression="execution(* com.aebiz..ModulesTest.*(..))"></aop:pointcut>
+			<aop:before method="hasPermitsAnno" pointcut="myPointCut"/>
+		</aop:aspect>
+	</aop:config>
+	 -->
+	
+</beans>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="messageSource"
+		class="com.aebiz.b2b2c.baseframework.message.AppResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+
+				<value>customermgr/CustomerTitle</value>
+				<value>customermgr/CustomerLoginTitle</value>
+				<value>customermgr/CustomerError</value>
+				<value>customermgr/CustomerFindPwdError</value>
+				<value>customermgr/CustomerFindPwdTitle</value>
+				<value>customermgr/CustomerRegisterError</value>
+				<value>customermgr/CustomerRegisterTitle</value>
+				<value>customermgr/UcenterCustomerTitle</value>
+				
+				<value>sysconf</value>
+				<value>weixin-alipayconnectconfig</value>
+				<value>pay</value>
+				<value>kjl</value>
+				<value>CustomerInterface</value>
+				
+				<value>basicdatamgr/BasicDataError</value>
+				<value>basicdatamgr/BasicDataTitle</value>
+				
+				<value>giftcardmgr/GiftCardsTitle</value>
+				
+				<value>financemgr/FinanceError</value>
+				<value>financemgr/FinancePubTitle</value>
+				<value>financemgr/InvoiceCompanyTitle</value>
+				
+				<value>ordermgr/OrderError</value>
+				<value>ordermgr/OrderPubTitle</value>
+				
+				<value>userfront/PlatAdImageRelTitle</value>
+				<value>userfront/PlatAdTitle</value>
+				<value>userfront/PlatImageCategoryTitle</value>
+				<value>userfront/PlattImageLibraryTitle</value>
+				
+				<value>productmgr/ProductError</value>
+				<value>productmgr/ProductGroupError</value>
+				<value>productmgr/ProductGroupTitle</value>
+				<value>productmgr/ProductTitle</value>
+				
+				<value>cms/ProductAppraiseTitle</value>
+				<value>cms/ProtectionError</value>
+				<value>cms/ProtectionProductRelTitle</value>
+				<value>cms/ProtectionStoreRelTitle</value>
+				<value>cms/StoreTagsTitle</value>
+				<value>cms/TagsCategoryError</value>
+				<value>cms/TagsCategoryTitle</value>
+				<value>cms/TagsCategoyRelTitle</value>
+				<value>cms/TagsError</value>
+				<value>cms/TagsTitle</value>
+				<value>cms/StoreConsumerProtectTitle</value>
+				<value>cms/OrderShowError</value>
+				<value>cms/OrderShowTitle</value>
+				<value>cms/OrderMainAppraiseError</value>
+				<value>cms/OrderMainAppraiseTitle</value>
+				<value>cms/InnerMessageTitle</value>
+				<value>cms/MessageRemindTitle</value>
+				<value>cms/channelTitle</value>
+				<value>cms/ConsumerProtectionTitle</value>
+				<value>cms/ContentCategoryTitle</value>
+				<value>cms/ContentTitle</value>
+				<value>cms/ProductTraceTitle</value>
+
+				<value>store/StoreError</value>
+				<value>store/StorePubTitle</value>
+				
+				<value>returnorexchangemgr/AfterSaleTitle</value>
+				<value>returnorexchangemgr/AfterSaleError</value>
+				<value>returnorexchangemgr/OrderAfterSaleServiceTitle</value>
+				<value>returnorexchangemgr/ComplaintsTitle</value>
+				
+				<value>basebusiness/SystemPubError</value>
+				<value>basebusiness/SystemPubTitle</value>
+				
+				<value>shipmentmgr/ShipMentTitle</value>
+				<value>shipmentmgr/StoreAddressTitle</value>
+				
+				<value>vipclubmgr/VipclubTitle</value>
+				<value>vipclubmgr/GiftPackageError</value>
+				<value>vipclubmgr/GiftPackageTitle</value>
+				<value>virtualaccountmgr/VirtualAccountError</value>
+				<value>virtualaccountmgr/VirtualAccountPubTitle</value>
+				
+				<value>websiteoperatemgr/PaltCongfigTitle</value>
+				<value>websiteoperatemgr/WebsiteOperateTitle</value>
+				
+				<value>productmgr/ProductCategoryFrontTitle</value>
+				<value>productmgr/ProductCategoryStoreTitle</value>
+				<value>productmgr/ProductPubMessagse</value>
+				
+				<value>productstockmgr/myPubMessagse</value>
+				<value>productstockmgr/ProductStockError</value>
+				<value>productstockmgr/ProductStockTitle</value>
+				
+				<value>thirdinterface/EmailMessageTitle</value>
+				<value>thirdinterface/MobileMessageTitle</value>
+				<value>thirdinterface/ThirdInterfaceTemplateTitle</value>
+				
+				
+				<value>promotion/RedPacketTitle</value>
+				<value>promotion/RedPacketTypeTitle</value>
+				<value>promotion/PromotionBgError</value>
+				<value>promotion/PromotionDefineTitle</value>
+				<value>promotion/PromotionPrivilegeOrderTitle</value>
+				<value>promotion/PromotionPrivilegePriceTitle</value>
+				<value>promotion/PromotionStoreAttendTitle</value>
+				<value>promotion/PromotionUseDefineTitle</value>
+				<value>promotion/CouponDetailsTitle</value>
+				<value>promotion/CouponTypeTitle</value>
+				<value>promotion/CouponTypeCategoryRelTitle</value>
+				<value>promotion/PromotionActivtyInfoTitle</value>
+				
+				<value>pubtitle/Base_messages</value>
+				
+				<value>decorateplatform/ComponentParamTitle</value>
+				<value>decorateplatform/ComponentsTitle</value>
+				<value>decorateplatform/PagesTitle</value>
+				<value>decorateplatform/PictureTitle</value>
+				<value>decorateplatform/StoreNavigationTitle</value>
+				<value>decorateplatform/TemplateComponentParamsValueTitle</value>
+				<value>decorateplatform/TemplatePageComponentParamsValueTitle</value>
+				<value>decorateplatform/TemplatePageComponentsTitle</value>
+				<value>decorateplatform/TemplatesPagesTitle</value>
+				<value>decorateplatform/TemplatesTitle</value>
+				<value>decorateplatform/UserPageComponentParamValueTitle</value>
+				<value>decorateplatform/UserTemplateComponentParamValueTitle</value>
+				<value>decorateplatform/UserTemplatePagesTitle</value>
+				<value>decorateplatform/UserTemplatesTitle</value>
+
+				<value>detection/DetectionMechanismTitle</value>
+				<value>detection/DetectionCategoryTitle</value>
+				<value>detection/DetectionCategoryParamTitle</value>
+				<value>detection/DetectionStoreTitle</value>
+				<value>detection/DetectionBillTitle</value>
+				
+				
+				<value>storedcardapp/StoredCardAppTitle</value>
+				<value>createcardlog/createcardlogTitle</value>
+				<value>productmgr/ProductImageLibraryTitle</value>
+				<value>merchandiseprizes/MerchandisePrizesTitle</value>
+				
+				<value>integralturntable/IntegralTurntableTitle</value>
+				
+				<value>winninglist/WinningListTitle</value>
+				<value>mechanismcategory/MechanismCategoryTitle</value>
+				<value>salestats/SaleStatsTitle</value>
+				<value>enterprise/EnterpriseTitle</value>
+
+				<value>employeeapply/EmployeeApplyTitle</value>
+
+				<value>welfaretype/WelfareTypeTitle</value>
+				<value>welfaredetails/WelfareDetailsTitle</value>
+
+				<value>welfareproductrel/WelfareProductRelTitle</value>
+				
+				<value>matchingtemplate/MatchingClassificationTitle</value> 
+
+				<value>matchingtemplate/MatchingAttributeTitle</value> 
+				<value>matchingtemplate/MatchingRelevanceTitle</value> 
+				
+				<value>matchingtemplate/MatchingProductRelTitle</value>
+				
+				<value>matchingtemplate/MatchingCustomizationTitle</value>
+				
+				<value>mobiledecorate/MobileComponentsTitle</value>
+				<value>mobiledecorate/MobilePageTitle</value>
+				
+				<value>frontcomps/DecorateTitle</value>
+				<value>partnersites/PartnerSitesTitle</value>
+				<value>promotion/CouponTypeProductRelTitle</value>
+				<value>promotion/CouponBatchTitle</value>
+				<value>promotion/CouponTypeCustomerRelTitle</value>
+				<value>promotion/FriendIncentiveInviteTitle</value>
+				<value>promotion/PromotionActivtyCustomerRelTitle</value>
+				<value>promotion/RegisteredMemberRewardTitle</value>
+				<value>product/SolveSchemeTitle</value>
+				<value>product/CaseAnalysisTitle</value>
+				<value>product/CommercialProductCategoryTitle</value>
+				<value>customermgr/CustomerInterestsTitle</value>
+				<value>customermgr/GeneralizeLogTitle</value>
+				<value>customermgr/GeneralizeChannelTitle</value>
+				<value>customermgr/GeneralizeChannelProductTitle</value>
+				<value>customermgr/GeneralizeStatTitle</value>
+
+				<value>cms/ResumeTitle</value>
+				<value>cms/RecruitmentTitle</value>
+				<value>cms/SystemDeptTitle</value>
+				<value>cms/RecruitDeptTitle</value>
+				<value>cms/WorkExperienceTitle</value>
+				<value>cms/RecruitResumeRelTitle</value>
+				<value>cms/HelpJionUsTitle</value>
+				<value>cms/ResumeCourseTitle</value>
+				<value>cms/BrandNewsCategoryTitle</value>
+				<value>product/SolveschemeCategoryTitle</value>
+				<value>product/CaseanalysisCategoryTitle</value>
+				<value>product/CustomizedProgramTitle</value>
+				<value>customermgr/DesignerTitle</value>
+				<value>cms/ResourceMagazineTitle</value>
+				<value>cms/MagazineDetailTitle</value>
+				<value>product/CustomizedProgramTemplateTitle</value>
+				<value>product/CustomizedProgramTemplateRelTitle</value>
+				<value>cms/EvaluateTagsTitle</value>
+				<value>shipment/ProductTransfertemplateRelTitle</value>
+				<value>product/CustomizedProgramError</value>
+				<value>store/MeansTypeTitle</value>
+				<value>producttaxmodifylog/ProductTaxModifyLogTitle</value>
+				<value>product/SolveSchemeCaseanalysisCategoryRelTitle</value>
+				<value>commissiontype/ProductCategoryCommissionTypeTitle</value>
+				<value>customermgr/WholesaleChannelTitle</value>
+				<value>customermgr/WholesaleChannelCustomerRelTitle</value>
+				<value>customermgr/WholesaleChannelProductRelTitle</value>
+			</list>
+		</property>
+		<property name="language" value="zh"/>
+		<property name="country" value="CN"/>
+	</bean>
+</beans>
